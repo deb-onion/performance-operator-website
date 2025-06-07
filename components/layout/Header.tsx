@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Container } from './Container';
 import { Button } from '../ui/Button';
-import { logError } from '@/lib/utils/errorLogger';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -21,20 +21,18 @@ export default function Header() {
   const pathname = usePathname();
 
   const toggleMenu = () => {
-    try {
-      setIsOpen(!isOpen);
-    } catch (error) {
-      logError(error as Error, { context: 'Header', metadata: { action: 'toggleMenu' } });
-    }
+    setIsOpen(!isOpen);
   };
 
   return (
-    <header className="bg-white border-b border-[#E5E5E5] py-4 sticky top-0 z-50">
+    <header className="bg-background/80 backdrop-blur-xl border-b border-border/50 py-4 sticky top-0 z-50 transition-all duration-200">
       <Container>
         <nav className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-[#0F2E4C] font-bold text-xl">
-              onlydeb
+            <Link href="/" className="text-foreground font-bold text-xl hover:text-primary transition-colors duration-200">
+              <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
+                onlydeb
+              </span>
             </Link>
           </div>
 
@@ -44,26 +42,33 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-base font-medium transition-colors ${
+                className={`text-base font-medium transition-all duration-200 hover:text-primary relative ${
                   pathname === item.href
-                    ? 'text-[#2D9CDB]'
-                    : 'text-[#4F4F4F] hover:text-[#2D9CDB]'
+                    ? 'text-primary'
+                    : 'text-muted-foreground'
                 }`}
               >
                 {item.name}
+                {pathname === item.href && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-primary-hover rounded-full" />
+                )}
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <Button href="/work-with-me">Let's Work Together</Button>
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
+            <Button href="/work-with-me" variant="gradient" size="default">
+              Let's Work Together
+            </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               type="button"
-              className="text-[#4F4F4F] hover:text-[#2D9CDB]"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 p-2"
               onClick={toggleMenu}
             >
               <span className="sr-only">Open main menu</span>
@@ -104,24 +109,24 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-[#E5E5E5]">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden mt-4 py-4 border-t border-border/50 bg-secondary/50 backdrop-blur-sm rounded-lg">
+            <div className="flex flex-col space-y-4 p-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-base font-medium transition-colors ${
+                  className={`text-base font-medium transition-all duration-200 hover:text-primary py-2 ${
                     pathname === item.href
-                      ? 'text-[#2D9CDB]'
-                      : 'text-[#4F4F4F] hover:text-[#2D9CDB]'
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
-                <Button href="/work-with-me" size="default" className="w-full">
+              <div className="pt-4 border-t border-border/50">
+                <Button href="/work-with-me" variant="gradient" size="default" className="w-full">
                   Let's Work Together
                 </Button>
               </div>
