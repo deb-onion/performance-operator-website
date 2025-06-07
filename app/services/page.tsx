@@ -3,62 +3,62 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Services | Performance Marketing Operator",
-  description: "Google Ads, Meta Ads, and performance marketing services designed to scale your brand without agency bloat.",
+  title: "PPC Management Services | onlydeb",
+  description: "Google Ads & Meta Ads management by Debroop Naha. 7+ years experience, 400% ROAS achieved, $5M+ ad spend managed. Results-driven PPC services.",
 };
 
 const services = [
   {
-    title: "Google Ads Scaling",
-    description: "Cut CPCs, increase ROAS, crush DTC goals.",
+    title: "Google Ads Management",
+    description: "Search, Shopping, App campaigns optimized for scale.",
     features: [
       "Search campaign optimization and scaling",
-      "Shopping campaign management for e-commerce",
-      "YouTube ads for brand awareness and conversions",
+      "Shopping campaigns for e-commerce (achieved $2M seasonal revenue)",
+      "App campaigns for user acquisition",
       "Performance Max campaigns for maximum reach",
-      "Advanced audience targeting and bid strategies",
-      "Landing page optimization recommendations"
+      "Advanced bidding strategies and automation",
+      "Conversion tracking and analytics setup"
     ],
-    results: "Average 47% CPC reduction with 2.8x ROAS improvement"
+    results: "Achieved 400% ROAS consistently, managed 400+ accounts at Google"
   },
   {
-    title: "Meta Ads Performance",
-    description: "Target with intent, scale with speed.",
+    title: "Meta Ads (Facebook & Instagram)",
+    description: "Social media campaigns that convert and scale.",
     features: [
       "Facebook and Instagram campaign management",
-      "Advanced audience research and lookalike modeling",
-      "Creative testing and optimization frameworks",
+      "Advanced audience targeting and lookalike modeling",
+      "Creative testing and A/B optimization",
       "Funnel optimization from awareness to conversion",
       "Retargeting campaigns for maximum lifetime value",
-      "iOS 14.5+ privacy-compliant tracking setup"
+      "Pixel setup and iOS 14.5+ compliance"
     ],
-    results: "Typical 3.2x ROAS with 40% lower CPAs"
+    results: "5x monthly sign-up growth achieved at Bloomstories"
   },
   {
-    title: "Sales Funnel Strategy",
-    description: "Full-funnel builds from ad to checkout.",
+    title: "Multi-Platform Campaign Management",
+    description: "Spotify Ads, Apple Search Ads, unified strategy.",
     features: [
-      "Customer journey mapping and optimization",
-      "Landing page strategy and conversion optimization",
-      "Email marketing integration and automation",
-      "Multi-channel attribution modeling",
-      "A/B testing frameworks for continuous improvement",
-      "Analytics setup and performance tracking"
+      "Spotify advertising for audio content and music apps",
+      "Apple Search Ads for iOS app acquisition",
+      "Cross-platform campaign coordination",
+      "Unified reporting and attribution modeling",
+      "Budget allocation optimization across channels",
+      "Campaign automation with scripts and tools"
     ],
-    results: "End-to-end conversion rate improvements of 25-60%"
+    results: "Managed $100K+ monthly budgets across multiple platforms"
   },
   {
-    title: "Conversion Copy & Ad Creatives",
-    description: "Scroll-stopping ads, high-click CTAs.",
+    title: "Campaign Optimization & Analytics",
+    description: "Data-driven optimization and performance analysis.",
     features: [
-      "High-converting ad copy for all platforms",
-      "Creative brief development for design teams",
-      "Landing page copy optimization",
-      "Email marketing copy and automation sequences",
-      "A/B testing copy variations",
-      "Brand voice development for performance marketing"
+      "Advanced campaign optimization techniques",
+      "A/B testing of ad creatives and landing pages",
+      "Conversion rate optimization strategies",
+      "Custom analytics and tracking implementation",
+      "Automated reporting and insights",
+      "Performance analysis and strategic recommendations"
     ],
-    results: "Click-through rates improved by 40-80% on average"
+    results: "Maintained CPA below $8 globally while scaling to $300K+ budgets"
   }
 ];
 
@@ -96,14 +96,14 @@ export default function ServicesPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[#0F2E4C] leading-tight">
-              Built for scale. Designed to convert.
+              Proven PPC Management Services
             </h1>
             <p className="mt-6 text-lg md:text-xl text-[#4F4F4F]">
-              Not bloated agency packages. Just what works. Direct expertise that drives measurable growth for your brand.
+              7+ years managing campaigns for Google, Bloomstories, Dagamma, and more. From $100K to $300K+ monthly budgets. Google Ads, Meta Ads, Spotify, Apple Search Ads - I've scaled them all.
             </p>
             <div className="mt-10">
               <Button href="/work-with-me" size="lg">
-                Let's Build It
+                Let's Scale Together
               </Button>
             </div>
           </div>
@@ -306,14 +306,14 @@ export default function ServicesPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to scale without the agency bloat?
+              Ready for results like Bloomstories and Dagamma?
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Let's discuss your goals and create a custom strategy to drive real growth.
+              Let's discuss how I can bring the same performance-driven approach to your campaigns.
             </p>
             <div className="mt-10">
               <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
-                Start Your Growth Journey
+                Book a Strategy Call
               </Button>
             </div>
           </div>

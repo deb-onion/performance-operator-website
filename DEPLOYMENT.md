@@ -2,7 +2,7 @@
 
 ## ✅ Project Status: READY FOR DEPLOYMENT
 
-The Performance Marketing Operator website is complete and ready for production deployment.
+The **onlydeb** website is complete and ready for production deployment to onlydeb.com.
 
 ## 📋 Pre-Deployment Checklist
 
@@ -19,12 +19,12 @@ The Performance Marketing Operator website is complete and ready for production 
 
 1. **Create GitHub Repository**
    - Go to GitHub.com
-   - Create new repository: `performance-operator-website`
+   - Create new repository: `onlydeb-website`
    - Don't initialize with README (we already have one)
 
 2. **Push to GitHub**
    ```bash
-   git remote add origin https://github.com/yourusername/performance-operator-website.git
+   git remote add origin https://github.com/yourusername/onlydeb-website.git
    git branch -M main
    git push -u origin main
    ```
@@ -35,7 +35,7 @@ The Performance Marketing Operator website is complete and ready for production 
    - Go to [Cloudflare Dashboard](https://dash.cloudflare.com) > Pages
    - Click "Create a project"
    - Connect your GitHub account
-   - Select `performance-operator-website` repository
+   - Select `onlydeb-website` repository
 
 2. **Build Configuration**
    ```
@@ -55,13 +55,13 @@ The Performance Marketing Operator website is complete and ready for production 
 4. **Deploy**
    - Click "Save and Deploy"
    - Wait for build to complete (~2-3 minutes)
-   - Your site will be live at `https://performance-operator-website.pages.dev`
+   - Your site will be live at `https://onlydeb-website.pages.dev`
 
-## 🌐 Custom Domain (Optional)
+## 🌐 Custom Domain Setup
 
 1. **Add Custom Domain**
    - In Cloudflare Pages > Custom domains
-   - Add your domain (e.g., `performanceoperator.com`)
+   - Add your domain: `onlydeb.com`
    - Follow DNS setup instructions
 
 2. **SSL Certificate**
@@ -120,4 +120,4 @@ For deployment issues, refer to:
 
 ---
 
-**🎉 Congratulations! Your Performance Marketing Operator website is ready to generate leads and showcase your expertise.** 
+**🎉 Congratulations! Your onlydeb website is ready to showcase your proven PPC expertise and generate quality leads.** 

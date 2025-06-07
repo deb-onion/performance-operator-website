@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "About | Performance Marketing Operator",
-  description: "Learn more about the operator behind the results. Direct, transparent performance marketing without the agency bloat.",
+  title: "About Debroop Naha | onlydeb",
+  description: "Meet Debroop Naha - 7+ years PPC Manager who delivered 400% ROAS at Google, Bloomstories, Dagamma. Performance marketing without agency bloat.",
 };
 
 export default function AboutPage() {
@@ -14,10 +14,10 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-[#0F2E4C] leading-tight">
-              The Operator Behind the Results
+              Hi, I'm Debroop Naha
             </h1>
             <p className="mt-6 text-lg md:text-xl text-[#4F4F4F]">
-              I'm a performance marketing specialist who works directly with brands to deliver measurable results without the agency bloat.
+              A results-driven PPC Manager with 7+ years managing multi-million dollar campaigns across e-commerce, BFSI, automotive, and technology. From Google to Bloomstories, I deliver scalable, data-driven solutions.
             </p>
           </div>
         </Container>
@@ -39,16 +39,16 @@ export default function AboutPage() {
 
             <div>
               <h2 className="text-3xl font-bold text-[#0F2E4C] mb-6">
-                My Story
+                My Journey
               </h2>
               <p className="text-[#4F4F4F] mb-4">
-                After years working in top marketing agencies, I noticed a consistent problem: talented marketers buried under layers of account managers, executives, and approval processes. The result? Slower implementation, miscommunication, and wasted ad spend.
+                My performance marketing journey started at Google as a Senior Associate, where I managed 400+ accounts quarterly and achieved 100% CSAT scores for three consecutive quarters. This experience taught me the fundamentals of campaign optimization at scale.
               </p>
               <p className="text-[#4F4F4F] mb-4">
-                I founded this practice on a simple premise: brands deserve direct access to the person running their campaigns. No gatekeepers, no lost messages, just direct expertise and accountability.
+                From there, I worked with leading brands like Bloomstories (Germany) and Dagamma Ecommerce Solutions, managing monthly budgets of $100K-$300K+ and consistently delivering exceptional results - 400% ROAS, 5x growth in sign-ups, and $2M+ in seasonal revenue.
               </p>
               <p className="text-[#4F4F4F]">
-                Now I work with select brands to deliver what agencies often promise but rarely achieve: fast implementation, agile optimization, and real, measurable growth.
+                Now I work directly with brands who want proven expertise without agency overhead. Whether it's Google Ads, Meta Ads, or multi-platform campaigns, I bring the same precision and results that scaled major brands to every client partnership.
               </p>
             </div>
           </div>
@@ -73,27 +73,27 @@ export default function AboutPage() {
               </div>
               <h3 className="mt-6 text-xl font-semibold text-[#1A1A1A]">Years of Experience</h3>
               <p className="mt-4 text-[#4F4F4F]">
-                Managing high-performance campaigns across platforms
+                From Google to Bloomstories to Dagamma - proven results across industries
               </p>
             </Card>
             
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-[#EBF6FF] rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-[#2D9CDB]">$10M+</span>
+                <span className="text-2xl font-bold text-[#2D9CDB]">$5M+</span>
               </div>
               <h3 className="mt-6 text-xl font-semibold text-[#1A1A1A]">Ad Spend Managed</h3>
               <p className="mt-4 text-[#4F4F4F]">
-                Optimized for maximum ROI across Google and Meta platforms
+                Annual budgets across Google Ads, Meta Ads, Spotify, and Apple Search Ads
               </p>
             </Card>
             
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-[#EBF6FF] rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-[#2D9CDB]">30+</span>
+                <span className="text-2xl font-bold text-[#2D9CDB]">400%</span>
               </div>
-              <h3 className="mt-6 text-xl font-semibold text-[#1A1A1A]">Brands Scaled</h3>
+              <h3 className="mt-6 text-xl font-semibold text-[#1A1A1A]">Peak ROAS Achieved</h3>
               <p className="mt-4 text-[#4F4F4F]">
-                From DTC startups to established e-commerce brands
+                Consistently delivered across subscription and e-commerce models
               </p>
             </Card>
           </div>
@@ -191,10 +191,10 @@ export default function AboutPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to work with an operator, not an agency?
+              Ready to work with proven expertise?
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Let's discuss how I can help scale your brand with precision and transparency.
+              Let's discuss how I can bring the same performance that scaled Bloomstories and Dagamma to your campaigns.
             </p>
             <div className="mt-10">
               <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">

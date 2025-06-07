@@ -34,7 +34,7 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="text-[#0F2E4C] font-bold text-xl">
-              Performance Operator
+              onlydeb
             </Link>
           </div>
 
@@ -56,7 +56,7 @@ export default function Header() {
           </div>
 
           <div className="hidden md:block">
-            <Button href="/work-with-me">Let's Scale Together</Button>
+            <Button href="/work-with-me">Let's Work Together</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -122,7 +122,7 @@ export default function Header() {
               ))}
               <div className="pt-4">
                 <Button href="/work-with-me" size="default" className="w-full">
-                  Let's Scale Together
+                  Let's Work Together
                 </Button>
               </div>
             </div>

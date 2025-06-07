@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Hero 
-        headline="Brands don't need agencies. They need operators."
-        subheadline="I'm a performance marketing operator helping brands cut wasted ad spend and scale with precision. No fluff. No middlemen. Just results."
+        headline="7+ Years Managing Multi-Million Dollar Campaigns"
+        subheadline="I'm Debroop, a results-driven PPC Manager who delivered 400% ROAS and $2M+ revenue for brands. From Google to Bloomstories, I optimize campaigns that scale. No agency bloat—just direct expertise."
         cta="Let's Scale Together"
         ctaHref="/work-with-me"
       />
@@ -69,10 +69,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F2E4C]">
-                Results That Speak Volumes
+                Proven Results Across Industries
               </h2>
               <p className="mt-4 text-lg text-[#4F4F4F]">
-                My clients see measurable improvements in their key metrics, from lower CPCs to higher ROAS.
+                From Google to Bloomstories to Dagamma, I've consistently delivered measurable improvements that drive real business growth.
               </p>
               
               <div className="mt-8 space-y-6">
@@ -83,8 +83,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <p className="text-lg font-semibold text-[#1A1A1A]">47% Reduction in CPC</p>
-                    <p className="text-[#4F4F4F]">Across Google Search campaigns</p>
+                    <p className="text-lg font-semibold text-[#1A1A1A]">400% ROAS Achieved</p>
+                    <p className="text-[#4F4F4F]">Consistently across multiple brands</p>
                   </div>
                 </div>
                 
@@ -95,8 +95,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <p className="text-lg font-semibold text-[#1A1A1A]">3.2x ROAS Improvement</p>
-                    <p className="text-[#4F4F4F]">For e-commerce DTC brands</p>
+                    <p className="text-lg font-semibold text-[#1A1A1A]">5x Monthly Sign-up Growth</p>
+                    <p className="text-[#4F4F4F]">At Bloomstories with $100K+ monthly budget</p>
                   </div>
                 </div>
                 
@@ -107,8 +107,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <p className="text-lg font-semibold text-[#1A1A1A]">$1.2M+ Revenue Generated</p>
-                    <p className="text-[#4F4F4F]">Direct from optimized ad campaigns</p>
+                    <p className="text-lg font-semibold text-[#1A1A1A]">$2M+ Revenue Generated</p>
+                    <p className="text-[#4F4F4F]">During seasonal peaks at Dagamma</p>
                   </div>
                 </div>
               </div>
@@ -122,8 +122,8 @@ export default function Home() {
               <Card variant="result" highlight="primary" className="mb-6">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-xl font-semibold text-[#1A1A1A]">DTC Beauty Brand</h3>
-                    <p className="text-[#4F4F4F] mt-1">Meta Ads Optimization</p>
+                    <h3 className="text-xl font-semibold text-[#1A1A1A]">Bloomstories</h3>
+                    <p className="text-[#4F4F4F] mt-1">Subscription Platform Optimization</p>
                   </div>
                   <div className="bg-[#EBF6FF] text-[#2D9CDB] text-sm font-semibold px-3 py-1 rounded-full">
                     Case Study
@@ -131,19 +131,19 @@ export default function Home() {
                 </div>
                 <div className="mt-6">
                   <div className="flex justify-between mb-2">
-                    <span className="text-[#4F4F4F]">Before</span>
+                    <span className="text-[#4F4F4F]">Monthly Sign-ups Before</span>
                     <span className="text-[#4F4F4F]">After</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-[#1A1A1A]">$2.41</span>
+                    <span className="text-2xl font-bold text-[#1A1A1A]">1x</span>
                     <div className="h-0.5 flex-grow mx-4 bg-[#E5E5E5] relative">
                       <div className="absolute left-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-[#F2994A]"></div>
                       <div className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-[#27AE60]"></div>
                     </div>
-                    <span className="text-2xl font-bold text-[#27AE60]">$0.87</span>
+                    <span className="text-2xl font-bold text-[#27AE60]">5x</span>
                   </div>
                   <p className="mt-4 text-[#4F4F4F]">
-                    Reduced CPA and scaled monthly ad spend from $15K to $45K while maintaining ROAS.
+                    Achieved 350% ROAS from subscription transactions while scaling monthly budget to $100K+ through strategic A/B testing.
                   </p>
                   <div className="mt-6">
                     <Button variant="tertiary" href="/results">View full case study →</Button>
@@ -154,8 +154,8 @@ export default function Home() {
               <Card variant="result" highlight="success">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-xl font-semibold text-[#1A1A1A]">SaaS Startup</h3>
-                    <p className="text-[#4F4F4F] mt-1">Google Ads Scaling</p>
+                    <h3 className="text-xl font-semibold text-[#1A1A1A]">Dagamma Ecommerce</h3>
+                    <p className="text-[#4F4F4F] mt-1">Global Campaign Scaling</p>
                   </div>
                   <div className="bg-[#EBF6FF] text-[#2D9CDB] text-sm font-semibold px-3 py-1 rounded-full">
                     Case Study
@@ -163,19 +163,19 @@ export default function Home() {
                 </div>
                 <div className="mt-6">
                   <div className="flex justify-between mb-2">
-                    <span className="text-[#4F4F4F]">Before</span>
+                    <span className="text-[#4F4F4F]">CPA Before</span>
                     <span className="text-[#4F4F4F]">After</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-[#1A1A1A]">28</span>
+                    <span className="text-2xl font-bold text-[#1A1A1A]">$12+</span>
                     <div className="h-0.5 flex-grow mx-4 bg-[#E5E5E5] relative">
                       <div className="absolute left-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-[#F2994A]"></div>
                       <div className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-[#27AE60]"></div>
                     </div>
-                    <span className="text-2xl font-bold text-[#27AE60]">142</span>
+                    <span className="text-2xl font-bold text-[#27AE60]">$8</span>
                   </div>
                   <p className="mt-4 text-[#4F4F4F]">
-                    Increased monthly lead volume by 407% while reducing cost per lead by 31%.
+                    Maintained CPA below $8 globally while scaling to $300K+ monthly budgets and achieving $2M in seasonal revenue.
                   </p>
                   <div className="mt-6">
                     <Button variant="tertiary" href="/results">View full case study →</Button>
@@ -191,14 +191,14 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to stop wasting ad spend?
+              Ready to scale like Bloomstories and Dagamma?
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Book a free strategy call to see how we can cut your costs and scale your results.
+              Let's discuss how I can bring the same results-driven approach to your campaigns. Direct access, proven results.
             </p>
             <div className="mt-10">
               <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
-                Let's Scale Together
+                Let's Work Together
               </Button>
         </div>
     </div>

@@ -62,11 +62,11 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="col-span-1 lg:col-span-2">
               <Link href="/" className="text-[#0F2E4C] font-bold text-xl">
-                Performance Operator
+                onlydeb
               </Link>
               <p className="mt-4 text-base text-[#4F4F4F] max-w-md">
-                Performance marketing with personal attention. Direct operator expertise 
-                that drives measurable growth for brands without agency bloat.
+                7+ years PPC Manager with proven results at Google, Bloomstories, Dagamma. 
+                Performance marketing expertise that delivers 400% ROAS and scales brands.
               </p>
               <div className="mt-6 flex space-x-6">
                 {footerNavigation.social.map((item) => (
@@ -101,15 +101,15 @@ export default function Footer() {
               <ul className="mt-4 space-y-3">
                 <li>
                   <a
-                    href="mailto:contact@example.com"
+                    href="mailto:debroop9@gmail.com"
                     className="text-base text-[#4F4F4F] hover:text-[#2D9CDB]"
                   >
-                    contact@example.com
+                    debroop9@gmail.com
                   </a>
                 </li>
                 <li>
                   <p className="text-base text-[#4F4F4F]">
-                    Based in New York, NY
+                    Based in Kolkata, India
                   </p>
                 </li>
               </ul>
@@ -118,7 +118,7 @@ export default function Footer() {
           
           <div className="mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between">
             <p className="text-sm text-[#828282]">
-              &copy; {currentYear} Performance Operator. All rights reserved.
+              &copy; {currentYear} onlydeb. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <Link href="#" className="text-sm text-[#828282] hover:text-[#2D9CDB]">

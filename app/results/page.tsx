@@ -3,75 +3,75 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Results & Case Studies | Performance Marketing Operator",
-  description: "Real brands, real results. See how direct operator expertise drives measurable growth without agency bloat.",
+  title: "Results & Case Studies | onlydeb",
+  description: "Real results from Bloomstories, Dagamma, and more. 400% ROAS, 5x growth, $2M+ revenue. See proven PPC management results.",
 };
 
 const caseStudies = [
   {
-    title: "DTC Beauty Brand",
-    industry: "Beauty & Cosmetics",
-    platform: "Meta Ads",
-    challenge: "High CPAs and difficulty scaling beyond $15K monthly ad spend",
-    strategy: "Audience optimization, creative testing framework, and funnel improvements",
-    timeframe: "3 months",
+    title: "Bloomstories",
+    industry: "Subscription Platform",
+    platform: "Google Ads, Facebook, Spotify, Apple Search Ads",
+    challenge: "Scaling subscription sign-ups while maintaining profitable ROAS with $100K+ monthly ad budget",
+    strategy: "A/B testing of ad creatives and landing pages, advanced bidding strategies, cross-platform optimization",
+    timeframe: "1.5 years (Feb 2023 - Jul 2024)",
     results: {
-      cpa: { before: "$2.41", after: "$0.87", improvement: "64% reduction" },
-      roas: { before: "2.1x", after: "4.8x", improvement: "129% increase" },
-      spend: { before: "$15K", after: "$45K", improvement: "200% scale" },
-      revenue: { before: "$31.5K", after: "$216K", improvement: "585% growth" }
+      signups: { before: "1x", after: "5x", improvement: "5x monthly growth" },
+      roas: { before: "150%", after: "350%", improvement: "133% increase" },
+      engagement: { before: "Standard", after: "+20%", improvement: "20% user engagement boost" },
+      budget: { before: "$50K", after: "$100K+", improvement: "Scaled budget 2x+" }
     },
     testimonial: {
-      text: "Working directly with an operator instead of an agency was game-changing. No more waiting weeks for simple changes, and our results speak for themselves.",
-      author: "Sarah Chen",
-      title: "Founder, Glow Beauty Co."
+      text: "Debroop excelled at refining keyword strategies, optimizing ad copy for higher engagement, and leveraging advanced analytics to uncover valuable opportunities. Their analytical prowess enabled them to convert complex data into actionable insights effectively.",
+      author: "Michael Albertshauser",
+      title: "COO, Bloom Stories"
     }
   },
   {
-    title: "SaaS Startup",
-    industry: "B2B Software",
-    platform: "Google Ads",
-    challenge: "Low lead volume and high cost per acquisition for B2B leads",
-    strategy: "Keyword expansion, landing page optimization, and lead quality improvement",
-    timeframe: "4 months",
+    title: "Dagamma Ecommerce",
+    industry: "E-commerce Solutions",
+    platform: "Google Ads & Facebook",
+    challenge: "Scaling global campaigns to $300K+ monthly budgets while maintaining CPA below $8",
+    strategy: "Shopping campaign optimization, automated bidding, merchant center optimization, advanced remarketing",
+    timeframe: "1.5 years (Jan 2022 - Aug 2023)",
     results: {
-      leads: { before: "28", after: "142", improvement: "407% increase" },
-      cpl: { before: "$89", after: "$61", improvement: "31% reduction" },
-      ltv: { before: "$2,400", after: "$3,100", improvement: "29% increase" },
-      conversion: { before: "2.1%", after: "4.7%", improvement: "124% increase" }
+      roas: { before: "200%", after: "400%", improvement: "100% improvement" },
+      revenue: { before: "$500K", after: "$2M", improvement: "$2M+ seasonal revenue" },
+      cpa: { before: "$12+", after: "$8", improvement: "33% CPA reduction" },
+      budget: { before: "$150K", after: "$300K+", improvement: "2x budget scale" }
     },
     testimonial: {
-      text: "The direct communication and rapid implementation made all the difference. We went from struggling to hit targets to exceeding them consistently.",
-      author: "Mike Rodriguez",
-      title: "CMO, TechFlow Solutions"
+      text: "I am pleased to write this letter of recommendation for Debroop Naha, who served as PPC Manager at Baby Doppler for 1 year and 10 months. During his time with us, Deb consistently demonstrated a high level of expertise in pay-per-click advertising and delivered exceptional results.",
+      author: "Mitho Kuna",
+      title: "President & CEO, Baby Doppler (Dagamma)"
     }
   },
   {
-    title: "E-commerce Fashion",
-    industry: "Fashion & Apparel",
-    platform: "Google Shopping & Meta",
-    challenge: "Seasonal fluctuations and poor ROAS during off-peak periods",
-    strategy: "Multi-channel approach with dynamic product ads and retargeting",
-    timeframe: "6 months",
+    title: "Freelance Portfolio",
+    industry: "Multi-Industry",
+    platform: "Google Ads, Facebook Ads",
+    challenge: "Managing diverse client portfolios across automotive, travel, and e-commerce with annual budgets of $200K+",
+    strategy: "Industry-specific campaign strategies, advanced audience targeting, conversion optimization",
+    timeframe: "3+ years (Sep 2018 - Dec 2021)",
     results: {
-      roas: { before: "1.8x", after: "3.4x", improvement: "89% increase" },
-      revenue: { before: "$125K", after: "$340K", improvement: "172% growth" },
-      aov: { before: "$67", after: "$89", improvement: "33% increase" },
-      customers: { before: "1,865", after: "3,820", improvement: "105% growth" }
+      leads: { before: "100/day", after: "500+/day", improvement: "500+ daily leads (Garage Doors LA)" },
+      signups: { before: "200/week", after: "1000+/week", improvement: "1000+ weekly signups (educational apps)" },
+      roas: { before: "200%", after: "400%", improvement: "Consistent 400% ROAS (Mandarin Duck)" },
+      clients: { before: "5", after: "15+", improvement: "Managed 15+ clients annually" }
     },
     testimonial: {
-      text: "Finally found someone who understands e-commerce seasonality. Our off-peak months are now profitable instead of just breaking even.",
-      author: "Lisa Park",
-      title: "CEO, Urban Threads"
+      text: "Debroop Naha deeply understands digital advertising platforms, including Google Ads, Facebook Ads Manager, and other relevant tools. He excelled at analyzing campaign performance, optimizing for improved ROI, and implementing strategies that achieved measurable outcomes.",
+      author: "Various Clients",
+      title: "Freelance Client Portfolio"
     }
   }
 ];
 
 const metrics = [
-  { number: "47%", label: "Average CPC Reduction", description: "Across Google Search campaigns" },
-  { number: "3.2x", label: "ROAS Improvement", description: "For e-commerce DTC brands" },
-  { number: "$1.2M+", label: "Revenue Generated", description: "Direct from optimized campaigns" },
-  { number: "89%", label: "Client Retention", description: "After initial 3-month period" },
+  { number: "400%", label: "Peak ROAS Achieved", description: "Consistently across multiple brands" },
+  { number: "5x", label: "Sign-up Growth", description: "At Bloomstories with $100K+ budget" },
+  { number: "$2M+", label: "Revenue Generated", description: "During seasonal peaks at Dagamma" },
+  { number: "7+", label: "Years Experience", description: "From Google to leading brands" },
 ];
 
 export default function ResultsPage() {
@@ -81,10 +81,10 @@ export default function ResultsPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[#0F2E4C] leading-tight">
-              Real Brands. Real Results.
+              Proven Results from Real Brands
             </h1>
             <p className="mt-6 text-lg md:text-xl text-[#4F4F4F]">
-              Performance driven by strategy, not guesswork. See how direct operator expertise delivers measurable growth.
+              From Google to Bloomstories to Dagamma - see the actual results I've delivered across 7+ years of PPC management.
             </p>
           </div>
         </Container>
@@ -223,44 +223,44 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F2E4C]">
-              Industries I Work With
+              Industries I've Proven Results In
             </h2>
             <p className="mt-4 text-lg text-[#4F4F4F] max-w-3xl mx-auto">
-              Performance marketing strategies that work across verticals, adapted for your specific business model.
+              7+ years managing campaigns across e-commerce, BFSI, automotive, technology, and more. Each industry optimized for maximum performance.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
-                title: "E-commerce & DTC", 
-                description: "Product-based businesses looking to scale profitably",
-                examples: ["Fashion & Apparel", "Beauty & Cosmetics", "Home & Garden", "Electronics"]
+                title: "E-commerce & Subscription", 
+                description: "From Bloomstories to Dagamma - scaled subscription and e-commerce models",
+                examples: ["Subscription Platforms", "E-commerce Solutions", "Product Marketplaces", "Direct-to-Consumer Brands"]
               },
               { 
-                title: "SaaS & B2B", 
-                description: "Software companies seeking quality lead generation",
-                examples: ["SaaS Platforms", "B2B Services", "Professional Tools", "Enterprise Software"]
+                title: "Technology & Apps", 
+                description: "App acquisition campaigns and tech platform scaling",
+                examples: ["Educational Apps", "Mobile Applications", "SaaS Platforms", "Tech Startups"]
               },
               { 
-                title: "Health & Wellness", 
-                description: "Supplement and wellness brands in competitive markets",
-                examples: ["Supplements", "Fitness Equipment", "Wellness Services", "Health Apps"]
+                title: "BFSI (Banking & Finance)", 
+                description: "Financial services and insurance campaign management",
+                examples: ["Financial Services", "Insurance Products", "Investment Platforms", "Fintech Solutions"]
               },
               { 
-                title: "Education & Courses", 
-                description: "Online education and course creators",
-                examples: ["Online Courses", "Coaching Programs", "Educational Apps", "Certification Programs"]
+                title: "Automotive", 
+                description: "Automotive industry campaign optimization and lead generation",
+                examples: ["Car Dealerships", "Auto Services", "Vehicle Parts", "Automotive Technology"]
               },
               { 
-                title: "Professional Services", 
-                description: "Service-based businesses targeting local or national markets",
-                examples: ["Legal Services", "Consulting", "Real Estate", "Financial Services"]
+                title: "Travel & Tourism", 
+                description: "Tourism and travel industry campaign management",
+                examples: ["Dubai Visa Services", "Travel Agencies", "Tourism Operators", "Hospitality Services"]
               },
               { 
-                title: "Home Services", 
-                description: "Local service providers looking to dominate their markets",
-                examples: ["HVAC", "Roofing", "Landscaping", "Home Renovation"]
+                title: "Local Services", 
+                description: "High-converting local service provider campaigns",
+                examples: ["Garage Door Services", "Home Services", "Local Contractors", "Service Professionals"]
               }
             ].map((industry, index) => (
               <Card key={index} className="p-6">
@@ -288,14 +288,14 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to become the next success story?
+              Want results like these for your brand?
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Let's discuss your current challenges and create a strategy to drive similar results for your brand.
+              Let's discuss how I can bring the same expertise that scaled Bloomstories and Dagamma to your campaigns.
             </p>
             <div className="mt-10">
               <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
-                Start Your Success Story
+                Book Your Strategy Call
               </Button>
             </div>
           </div>
