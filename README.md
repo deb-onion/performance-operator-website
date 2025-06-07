@@ -138,6 +138,7 @@ Configure form submission endpoint in `app/contact/page.tsx`
 
 ## 📚 Documentation
 
+- **[🛠️ Technical Guide](TECHNICAL-GUIDE.md)** - **NEW!** Complete beginner-friendly guide explaining how everything works
 - [Product Requirements](docs/prd.md)
 - [Technical Specifications](docs/tech-spec.md)
 - [Design Guidelines](docs/design-guidelines.md)
