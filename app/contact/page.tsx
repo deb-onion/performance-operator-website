@@ -65,11 +65,27 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // In a real implementation, this would send to your API endpoint
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      console.log('Form submission:', sanitizedData);
+      // Submit form to API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sanitizedData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        if (result.errors) {
+          setErrors(result.errors);
+        } else {
+          setErrors([{ field: 'general', message: result.error || 'Failed to send message. Please try again.' }]);
+        }
+        return;
+      }
+
+      console.log('Form submitted successfully:', result);
       trackFormSubmission('contact_form');
       setIsSubmitted(true);
       
@@ -86,7 +102,7 @@ export default function ContactPage() {
         context: 'ContactForm', 
         metadata: { formData: { ...sanitizedData, message: '[redacted]' } } 
       });
-      setErrors([{ field: 'general', message: 'Failed to send message. Please try again.' }]);
+      setErrors([{ field: 'general', message: 'Network error. Please check your connection and try again.' }]);
     } finally {
       setIsSubmitting(false);
     }
