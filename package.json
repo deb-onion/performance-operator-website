@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:cf": "next build && find .next -name '*.pack' -delete 2>/dev/null || true",
     "start": "next start",
     "lint": "next lint"
   },

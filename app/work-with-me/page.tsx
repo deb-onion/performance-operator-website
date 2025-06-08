@@ -231,57 +231,18 @@ export default function WorkWithMePage() {
                     <p className="text-sm opacity-90">Select a time that works best for you</p>
                   </div>
                   
-                  {/* TODO: Replace with your actual Google Calendar appointment schedule embed code */}
-                  <div className="p-6 text-center bg-[#F9FAFB]">
-                    <div className="mb-4">
-                      <svg className="w-12 h-12 text-[#2D9CDB] mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                      <h5 className="font-semibold text-[#1A1A1A] mb-2">Ready to Integrate</h5>
-                      <p className="text-sm text-[#4F4F4F] mb-4">
-                        Follow the setup guide to connect your Google Calendar appointment scheduling
-                      </p>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <a 
-                        href="https://calendar.google.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-full"
-                      >
-                        <Button className="w-full">
-                          Set Up Google Calendar Booking
-                        </Button>
-                      </a>
-                      <Button 
-                        href="mailto:ads@onlydeb.com?subject=Strategy Call Request" 
-                        variant="secondary"
-                        className="w-full"
-                      >
-                        Email to Schedule Instead
-                  </Button>
-                    </div>
+                  {/* Google Calendar Booking System - Live */}
+                  <div className="bg-white">
+                    <iframe 
+                      src="https://calendar.google.com/calendar/appointments/AcZssZ3eEiEwjtCQxY8Dg9UXKk3OzM_4pEUvgwAQE00=?gv=true" 
+                      style={{border: 0}} 
+                      width="100%" 
+                      height="600" 
+                      frameBorder="0"
+                      title="Book Strategy Call"
+                    />
                   </div>
-                  
-                  {/* 
-                  INTEGRATION INSTRUCTIONS:
-                  1. Go to Google Calendar (calendar.google.com)
-                  2. Click "Create" > "Appointment schedule" 
-                  3. Set up your 30-minute strategy call schedule
-                  4. Configure availability, buffer times, etc.
-                  5. Go to Share > Website embed > Inline booking page
-                  6. Copy the embed code and replace this placeholder
-                  
-                  Example embed code structure:
-                  <iframe 
-                    src="https://calendar.google.com/calendar/appointments/schedules/YOUR_SCHEDULE_ID" 
-                    style="border: 0" 
-                    width="100%" 
-                    height="600" 
-                    frameborder="0">
-                  </iframe>
-                  */}
+
                 </div>
 
                 <div className="mt-6 text-center">
