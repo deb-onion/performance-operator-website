@@ -48,7 +48,7 @@ The **onlydeb** website is complete and ready for production deployment to onlyd
 3. **Environment Variables** (Optional)
    ```
    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-   NEXT_PUBLIC_SITE_URL=https://your-domain.com
+   NEXT_PUBLIC_SITE_URL=https://onlydeb.com
    NODE_VERSION=18
    ```
 

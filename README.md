@@ -158,11 +158,37 @@ Target audience: Brands looking to scale with paid ads through direct specialist
 3. **Environment Variables**
    ```
    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-   NEXT_PUBLIC_SITE_URL=https://your-domain.com
+   NEXT_PUBLIC_SITE_URL=https://onlydeb.com
+   NEXT_PUBLIC_BUSINESS_EMAIL=ads@onlydeb.com
    NODE_VERSION=18
    ```
 
 See `docs/deployment.md` for detailed deployment instructions.
+
+## 📅 Google Calendar Integration
+
+The website includes Google Workspace calendar integration for appointment booking:
+
+### Setup Steps
+1. **Google Calendar Configuration**
+   - Create appointment schedule in Google Calendar
+   - Configure availability and booking settings
+   - Get embed code for website integration
+
+2. **Website Integration**
+   - Update work-with-me page with calendar embed
+   - Configure email notifications to ads@onlydeb.com
+   - Test booking flow and confirmations
+
+3. **Complete Guide**
+   See `GOOGLE-CALENDAR-SETUP.md` for detailed setup instructions.
+
+### Features
+- **Professional Booking Page** - Branded calendar interface
+- **Google Meet Integration** - Automatic video meeting links
+- **Email Reminders** - Automated booking confirmations and reminders
+- **Spam Protection** - Email verification for bookings
+- **Mobile Optimized** - Responsive booking experience
 
 ## 📊 Performance
 

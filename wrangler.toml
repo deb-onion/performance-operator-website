@@ -2,7 +2,7 @@
 name = "performance-operator-website"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "out"
-
+ 
 # Environment variables (add these in Cloudflare dashboard)
 # NEXT_PUBLIC_GA_ID = "G-XXXXXXXXXX"
 # NEXT_PUBLIC_SITE_URL = "https://performanceoperator.com" 

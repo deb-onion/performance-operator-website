@@ -92,7 +92,7 @@ export const structuredData = {
   description: 'Performance-focused PPC Manager with 7+ years expertise managing multi-million dollar ad campaigns across diverse industries, delivering results like 400% ROAS and 47% CPC reduction.',
   jobTitle: 'PPC Manager & Performance Marketing Specialist',
   worksFor: {
-    '@type': 'Organization',
+  '@type': 'Organization',
     name: 'onlydeb',
   },
   alumniOf: [

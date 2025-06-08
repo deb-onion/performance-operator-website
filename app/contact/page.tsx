@@ -12,8 +12,8 @@ const contactMethods = [
   {
     title: "Email",
     description: "Best for detailed questions or proposals",
-    contact: "contact@example.com",
-    href: "mailto:contact@example.com"
+    contact: "ads@onlydeb.com",
+    href: "mailto:ads@onlydeb.com"
   },
   {
     title: "Strategy Call",

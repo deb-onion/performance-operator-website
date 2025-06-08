@@ -224,27 +224,69 @@ export default function WorkWithMePage() {
                   Schedule Your Call
                 </h3>
                 
-                {/* Calendar embed placeholder */}
-                <div className="bg-[#F9FAFB] border-2 border-dashed border-[#E5E5E5] rounded-lg p-12 text-center">
-                  <svg className="w-16 h-16 text-[#2D9CDB] mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <h4 className="text-lg font-semibold text-[#1A1A1A] mb-2">
-                    Calendar Integration
-                  </h4>
-                  <p className="text-[#4F4F4F] mb-6">
-                    Calendly or TidyCal integration would be embedded here for easy booking.
-                  </p>
-                  <Button href="mailto:contact@example.com?subject=Strategy Call Request" className="w-full">
-                    Email to Schedule Call
-                  </Button>
+                {/* Google Calendar appointment scheduling embed */}
+                <div className="bg-white rounded-lg border border-[#E5E5E5] overflow-hidden">
+                  <div className="p-6 bg-gradient-to-r from-[#2D9CDB] to-[#1B8FD3] text-white text-center">
+                    <h4 className="text-lg font-semibold mb-2">Book Your 30-Minute Strategy Call</h4>
+                    <p className="text-sm opacity-90">Select a time that works best for you</p>
+                  </div>
+                  
+                  {/* TODO: Replace with your actual Google Calendar appointment schedule embed code */}
+                  <div className="p-6 text-center bg-[#F9FAFB]">
+                    <div className="mb-4">
+                      <svg className="w-12 h-12 text-[#2D9CDB] mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <h5 className="font-semibold text-[#1A1A1A] mb-2">Ready to Integrate</h5>
+                      <p className="text-sm text-[#4F4F4F] mb-4">
+                        Follow the setup guide to connect your Google Calendar appointment scheduling
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <Button 
+                        href="https://calendar.google.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Set Up Google Calendar Booking
+                      </Button>
+                      <Button 
+                        href="mailto:ads@onlydeb.com?subject=Strategy Call Request" 
+                        variant="secondary"
+                        className="w-full"
+                      >
+                        Email to Schedule Instead
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  {/* 
+                  INTEGRATION INSTRUCTIONS:
+                  1. Go to Google Calendar (calendar.google.com)
+                  2. Click "Create" > "Appointment schedule" 
+                  3. Set up your 30-minute strategy call schedule
+                  4. Configure availability, buffer times, etc.
+                  5. Go to Share > Website embed > Inline booking page
+                  6. Copy the embed code and replace this placeholder
+                  
+                  Example embed code structure:
+                  <iframe 
+                    src="https://calendar.google.com/calendar/appointments/schedules/YOUR_SCHEDULE_ID" 
+                    style="border: 0" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0">
+                  </iframe>
+                  */}
                 </div>
 
                 <div className="mt-6 text-center">
                   <p className="text-sm text-[#828282]">
                     Prefer to talk first? Email me directly at{" "}
-                    <a href="mailto:contact@example.com" className="text-[#2D9CDB] hover:underline">
-                      contact@example.com
+                    <a href="mailto:ads@onlydeb.com" className="text-[#2D9CDB] hover:underline">
+                      ads@onlydeb.com
                     </a>
                   </p>
                 </div>
@@ -324,7 +366,7 @@ export default function WorkWithMePage() {
             <p className="text-[#4F4F4F] mb-6">
               Have a question not covered here?
             </p>
-            <Button href="mailto:contact@example.com?subject=Question About Working Together" variant="secondary">
+            <Button href="mailto:ads@onlydeb.com?subject=Question About Working Together" variant="secondary">
               Ask Me Directly
             </Button>
           </div>
