@@ -102,6 +102,23 @@ body {
   outline-offset: 2px;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .text-4xl {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+  }
+}
+
 /* Custom animations */
 @keyframes fadeInUp {
   from {

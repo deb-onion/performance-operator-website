@@ -197,7 +197,7 @@ export default function AboutPage() {
               Let's discuss how I can bring the same performance that scaled Bloomstories and Dagamma to your campaigns.
             </p>
             <div className="mt-10">
-              <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
+              <Button href="/work-with-me/" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
                 Let's Work Together
               </Button>
             </div>

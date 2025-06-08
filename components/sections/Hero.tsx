@@ -49,7 +49,7 @@ export default function Hero({ headline, subheadline, cta, ctaHref }: HeroProps)
               {cta}
             </Button>
             <Button 
-              href="/results" 
+              href="/results/" 
               variant="outline" 
               size="xl"
               className="min-w-[200px]"

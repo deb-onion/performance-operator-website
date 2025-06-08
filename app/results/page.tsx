@@ -294,7 +294,7 @@ export default function ResultsPage() {
               Let's discuss how I can bring the same expertise that scaled Bloomstories and Dagamma to your campaigns.
             </p>
             <div className="mt-10">
-              <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
+              <Button href="/work-with-me/" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
                 Book Your Strategy Call
               </Button>
             </div>

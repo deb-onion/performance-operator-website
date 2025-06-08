@@ -154,7 +154,7 @@ export default function ServicesPage() {
                   <p className="text-[#4F4F4F]">{service.results}</p>
                 </div>
 
-                <Button href="/work-with-me" className="w-full">
+                <Button href="/work-with-me/" className="w-full">
                   Get Started
                 </Button>
               </Card>
@@ -290,7 +290,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#E5E5E5]">
-                <Button href="/work-with-me" className="w-full" size="lg">
+                <Button href="/work-with-me/" className="w-full" size="lg">
                   Book a Strategy Call
                 </Button>
                 <p className="text-center text-sm text-[#828282] mt-3">
@@ -312,7 +312,7 @@ export default function ServicesPage() {
               Let's discuss how I can bring the same performance-driven approach to your campaigns.
             </p>
             <div className="mt-10">
-              <Button href="/work-with-me" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
+              <Button href="/work-with-me/" size="lg" className="bg-white text-[#0F2E4C] hover:bg-gray-100">
                 Book a Strategy Call
               </Button>
             </div>

@@ -24,13 +24,13 @@ export default function Home() {
         </div>
         
         <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="text-center p-4 bg-accent rounded-lg">
-              <div className="text-3xl font-bold text-foreground">5x</div>
+              <div className="text-2xl sm:text-3xl font-bold text-foreground">5x</div>
               <div className="text-sm text-muted-foreground">Sign-up Growth</div>
             </div>
             <div className="text-center p-4 bg-accent rounded-lg">
-              <div className="text-3xl font-bold text-success">350%</div>
+              <div className="text-2xl sm:text-3xl font-bold text-success">350%</div>
               <div className="text-sm text-muted-foreground">ROAS</div>
             </div>
           </div>
@@ -60,13 +60,13 @@ export default function Home() {
         </div>
         
         <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="text-center p-4 bg-accent rounded-lg">
-              <div className="text-3xl font-bold text-foreground">$300K+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-foreground">$300K+</div>
               <div className="text-sm text-muted-foreground">Monthly Budget</div>
             </div>
             <div className="text-center p-4 bg-accent rounded-lg">
-              <div className="text-3xl font-bold text-success">$2M+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-success">$2M+</div>
               <div className="text-sm text-muted-foreground">Seasonal Revenue</div>
             </div>
           </div>
@@ -96,13 +96,13 @@ export default function Home() {
         </div>
         
         <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="text-center p-4 bg-accent rounded-lg">
-              <div className="text-3xl font-bold text-foreground">400+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-foreground">400+</div>
               <div className="text-sm text-muted-foreground">Accounts/Quarter</div>
             </div>
             <div className="text-center p-4 bg-accent rounded-lg">
-              <div className="text-3xl font-bold text-success">100%</div>
+              <div className="text-2xl sm:text-3xl font-bold text-success">100%</div>
               <div className="text-sm text-muted-foreground">CSAT Score</div>
             </div>
           </div>
@@ -162,11 +162,11 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
         <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <Card key={index} variant="stats" className="text-center hover:scale-105 transition-transform duration-300">
-                <div className="text-3xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-2xl sm:text-3xl mb-2">{stat.icon}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
                 <div className="text-xs text-muted-foreground">{stat.description}</div>
               </Card>
@@ -251,7 +251,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12">
-            <Button href="/results" variant="gradient" size="lg">
+            <Button href="/results/" variant="gradient" size="lg">
               View All Case Studies
             </Button>
           </div>
@@ -281,10 +281,10 @@ export default function Home() {
               Let's discuss how I can bring the same results-driven approach to your campaigns. Direct access, proven results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/work-with-me" variant="gradient" size="xl">
+              <Button href="/work-with-me/" variant="gradient" size="xl">
                 Let's Work Together
               </Button>
-              <Button href="/results" variant="outline" size="xl">
+              <Button href="/results/" variant="outline" size="xl">
                 View Results
               </Button>
             </div>

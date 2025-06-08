@@ -69,10 +69,10 @@ export default function LeadMagnet({
             I'll be in touch within 24 hours with your audit results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/results" variant="outline">
+            <Button href="/results/" variant="outline">
               View Case Studies
             </Button>
-            <Button href="/about" variant="ghost">
+            <Button href="/about/" variant="ghost">
               Learn More About Me
             </Button>
           </div>

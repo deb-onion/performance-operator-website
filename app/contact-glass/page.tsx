@@ -16,7 +16,7 @@ const contactMethods = [
     title: "Strategy Call",
     description: "30-minute call to discuss your goals",
     contact: "Book directly",
-    href: "/work-with-me"
+    href: "/work-with-me/"
   },
   {
     title: "LinkedIn",
@@ -131,7 +131,7 @@ export default function ContactGlassPage() {
             <p className="text-lg text-[#4F4F4F] mb-8 max-w-2xl mx-auto">
               Skip the inbox and book a strategy call directly. We'll discuss your business and see if we're a good fit.
             </p>
-            <Button href="/work-with-me" size="lg">
+            <Button href="/work-with-me/" size="lg">
               Book a Strategy Call
             </Button>
           </div>
