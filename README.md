@@ -296,4 +296,4 @@ This project is licensed under the MIT License.
 
 ## 📞 Support
 
-For questions or support, please refer to the documentation or create an issue. 
+For questions or support, please refer to the documentation or create an issue. # Email integration live
