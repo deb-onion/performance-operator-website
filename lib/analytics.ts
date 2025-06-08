@@ -1,11 +1,12 @@
 // Analytics tracking utility for onlydeb website
-// Supports Google Analytics 4, Facebook Pixel, and custom events
+// Supports Google Analytics 4, Hotjar, Facebook Pixel, and custom events
 
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
     fbq: (...args: any[]) => void;
     dataLayer: any[];
+    hj: (...args: any[]) => void;
   }
 }
 
@@ -103,7 +104,7 @@ export const trackCTAClick = (ctaText: string, location: string) => {
 };
 
 // Google Analytics 4 configuration
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+export const GA_TRACKING_ID = 'G-QVK20BPH9M';
 
 export const pageview = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -193,4 +194,25 @@ export const trackEmailClick = () => {
     category: 'conversion',
     label: 'contact_email',
   });
+};
+
+// Hotjar tracking functions
+export const HOTJAR_ID = 6428703;
+
+export const trackHotjarEvent = (eventName: string) => {
+  if (typeof window !== 'undefined' && window.hj) {
+    window.hj('event', eventName);
+  }
+};
+
+export const trackHotjarFormSubmit = (formName: string) => {
+  trackHotjarEvent(`${formName}_submit`);
+};
+
+export const trackHotjarCTAClick = (ctaText: string) => {
+  trackHotjarEvent(`cta_click_${ctaText.replace(/\s+/g, '_').toLowerCase()}`);
+};
+
+export const trackHotjarPageSection = (sectionName: string) => {
+  trackHotjarEvent(`section_view_${sectionName}`);
 }; 
