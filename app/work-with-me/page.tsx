@@ -244,14 +244,16 @@ export default function WorkWithMePage() {
                     </div>
                     
                     <div className="space-y-3">
-                      <Button 
+                      <a 
                         href="https://calendar.google.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
                       >
-                        Set Up Google Calendar Booking
-                      </Button>
+                        <Button className="w-full">
+                          Set Up Google Calendar Booking
+                        </Button>
+                      </a>
                       <Button 
                         href="mailto:ads@onlydeb.com?subject=Strategy Call Request" 
                         variant="secondary"
