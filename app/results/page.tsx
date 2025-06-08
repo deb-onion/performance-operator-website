@@ -212,7 +212,7 @@ export default function ResultsPage() {
             <p className="text-[#4F4F4F] mb-8 max-w-2xl mx-auto">
               Every business is different, but the approach is the same: strategic thinking, direct execution, and continuous optimization.
             </p>
-            <Button href="/work-with-me" size="lg">
+            <Button href="/work-with-me/" size="lg">
               Book Your Strategy Call
             </Button>
           </div>

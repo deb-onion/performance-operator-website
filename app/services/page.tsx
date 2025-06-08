@@ -102,7 +102,7 @@ export default function ServicesPage() {
               7+ years managing campaigns for Google, Bloomstories, Dagamma, and more. From $100K to $300K+ monthly budgets. Google Ads, Meta Ads, Spotify, Apple Search Ads - I've scaled them all.
             </p>
             <div className="mt-10">
-              <Button href="/work-with-me" size="lg">
+              <Button href="/work-with-me/" size="lg">
                 Let's Scale Together
               </Button>
             </div>

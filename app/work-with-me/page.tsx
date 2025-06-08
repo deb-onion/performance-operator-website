@@ -241,6 +241,29 @@ export default function WorkWithMePage() {
                       frameBorder="0"
                       title="Book Strategy Call"
                     />
+                    
+                    {/* Fallback for calendar issues */}
+                    <div className="p-6 text-center border-t border-gray-200">
+                      <p className="text-sm text-gray-600 mb-4">
+                        Having trouble with the calendar? No problem!
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                        <Button 
+                          href="mailto:ads@onlydeb.com?subject=Strategy Call Request&body=Hi! I'd like to schedule a 30-minute strategy call. Please let me know your available times."
+                          variant="secondary"
+                          size="sm"
+                        >
+                          Email to Schedule
+                        </Button>
+                        <Button 
+                          href="/contact/"
+                          variant="outline"
+                          size="sm"
+                        >
+                          Contact Form
+                        </Button>
+                      </div>
+                    </div>
                   </div>
 
                 </div>

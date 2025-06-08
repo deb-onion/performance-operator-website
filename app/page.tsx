@@ -40,7 +40,7 @@ export default function Home() {
             achieving exceptional subscription transaction performance.
           </p>
           
-          <Button variant="outline" href="/results" className="w-full">
+          <Button variant="outline" href="/results/" className="w-full">
             View Case Study →
           </Button>
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
             exceptional seasonal performance across multiple markets.
           </p>
           
-          <Button variant="outline" href="/results" className="w-full">
+          <Button variant="outline" href="/results/" className="w-full">
             View Case Study →
           </Button>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
             building foundational expertise in campaign optimization at scale.
           </p>
           
-          <Button variant="outline" href="/about" className="w-full">
+          <Button variant="outline" href="/about/" className="w-full">
             Learn More →
           </Button>
         </div>
@@ -156,7 +156,7 @@ export default function Home() {
         headline="7+ Years Managing Multi-Million Dollar Campaigns"
         subheadline="I'm Debroop, a results-driven PPC Manager who delivered 400% ROAS and $2M+ revenue for brands. From Google to Bloomstories, I optimize campaigns that scale. No agency bloat—just direct expertise."
         cta="Let's Scale Together"
-        ctaHref="/work-with-me"
+        ctaHref="/work-with-me/"
       />
       
       {/* Stats Section */}

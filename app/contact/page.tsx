@@ -142,7 +142,7 @@ export default function ContactPage() {
                   {method.contact}
                 </p>
                 <Button 
-                  href={method.href} 
+                  href={method.href === "/work-with-me" ? "/work-with-me/" : method.href} 
                   variant="secondary" 
                   className="w-full"
                 >
@@ -348,7 +348,7 @@ export default function ContactPage() {
             <p className="text-lg text-[#4F4F4F] mb-8 max-w-2xl mx-auto">
               Skip the inbox and book a strategy call directly. We'll discuss your business and see if we're a good fit.
             </p>
-            <Button href="/work-with-me" size="lg">
+            <Button href="/work-with-me/" size="lg">
               Book a Strategy Call
             </Button>
           </div>

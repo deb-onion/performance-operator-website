@@ -9,11 +9,11 @@ import ThemeToggle from '../ui/ThemeToggle';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Results', href: '/results' },
-  { name: 'Work With Me', href: '/work-with-me' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'About', href: '/about/' },
+  { name: 'Services', href: '/services/' },
+  { name: 'Results', href: '/results/' },
+  { name: 'Work With Me', href: '/work-with-me/' },
+  { name: 'Contact', href: '/contact/' },
 ];
 
 export default function Header() {
@@ -58,7 +58,7 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Button href="/work-with-me" variant="gradient" size="default">
+            <Button href="/work-with-me/" variant="gradient" size="default">
               Let's Work Together
             </Button>
           </div>
@@ -126,7 +126,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="pt-4 border-t border-border/50">
-                <Button href="/work-with-me" variant="gradient" size="default" className="w-full">
+                <Button href="/work-with-me/" variant="gradient" size="default" className="w-full">
                   Let's Work Together
                 </Button>
               </div>
