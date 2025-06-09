@@ -24,6 +24,12 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const handleNavClick = (href: string, name: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Header navigation clicked:', name, 'href:', href);
+    }
+  };
+
   return (
     <header className="bg-background/80 backdrop-blur-xl border-b border-border/50 py-4 sticky top-0 z-50 transition-all duration-200">
       <Container>
@@ -42,6 +48,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
+                onClick={() => handleNavClick(item.href, item.name)}
                 className={`text-base font-medium transition-all duration-200 hover:text-primary relative ${
                   pathname === item.href
                     ? 'text-primary'
@@ -115,12 +122,15 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  onClick={() => {
+                    handleNavClick(item.href, item.name);
+                    setIsOpen(false);
+                  }}
                   className={`text-base font-medium transition-all duration-200 hover:text-primary py-2 ${
                     pathname === item.href
                       ? 'text-primary'
                       : 'text-muted-foreground'
                   }`}
-                  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>

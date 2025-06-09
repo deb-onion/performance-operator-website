@@ -45,8 +45,18 @@ The **onlydeb** website is complete and ready for production deployment to onlyd
    Root directory: / (leave empty)
    ```
 
-3. **Environment Variables** (Optional)
+3. **Environment Variables** (REQUIRED FOR FORMS!)
    ```
+   # CRITICAL - REQUIRED FOR FORMS TO WORK
+   RESEND_API_KEY=your_resend_api_key_here
+   FROM_EMAIL=ads@onlydeb.com
+   TO_EMAIL=ads@onlydeb.com
+   
+   # REQUIRED FOR SPAM PROTECTION
+   NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key_here
+   RECAPTCHA_SECRET_KEY=your_secret_key_here
+   
+   # SEO & ANALYTICS
    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
    NEXT_PUBLIC_SITE_URL=https://onlydeb.com
    NODE_VERSION=18
@@ -107,9 +117,11 @@ The **onlydeb** website is complete and ready for production deployment to onlyd
 - Ensure all imports are correct
 
 **Contact Form Not Working?**
-- Add form submission endpoint
-- Configure CORS if needed
-- Test form validation
+- ⚠️ **MOST COMMON**: Missing environment variables in production
+- Check RESEND_API_KEY is set correctly
+- Verify reCAPTCHA keys are configured
+- Test form validation in development first
+- Check browser console for errors
 
 ## 📞 Support
 

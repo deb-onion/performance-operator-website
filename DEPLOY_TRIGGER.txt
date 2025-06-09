@@ -1,1 +1,2 @@
-Force deployment - 404 navigation fixes and calendar improvements deployed
+Environment variables updated - triggering deployment
+Fixed forms: Lead magnet + Contact forms now work with Resend + reCAPTCHA integration

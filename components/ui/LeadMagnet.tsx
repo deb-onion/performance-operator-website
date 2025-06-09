@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from './Card';
 import { Button } from './Button';
 import { trackLeadMagnetSubmit } from '@/lib/analytics';
@@ -27,6 +27,26 @@ export default function LeadMagnet({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  // Load reCAPTCHA script
+  useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+    if (document.getElementById('recaptcha-script')) return;
+
+    const script = document.createElement('script');
+    script.id = 'recaptcha-script';
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
+
+  const executeRecaptcha = async (): Promise<string | null> => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey || !(window as any).grecaptcha) return null;
+    return await (window as any).grecaptcha.execute(siteKey, { action: 'submit' });
+  };
 
   const benefits = [
     "Comprehensive account analysis",
@@ -40,21 +60,70 @@ export default function LeadMagnet({
       ...prev,
       [e.target.name]: e.target.value
     }));
+    setError(''); // Clear any previous errors
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Track lead magnet submission
-    trackLeadMagnetSubmit(formData);
-    
-    console.log('Lead captured:', formData);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await executeRecaptcha();
+
+      // Convert lead magnet data to contact form format
+      const contactData = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        budget: formData.monthlySpend,
+        message: `Lead Magnet Request - FREE PPC Account Audit
+
+Primary Goal: ${formData.primaryGoal}
+Monthly Ad Spend: ${formData.monthlySpend}
+Company: ${formData.company}
+
+This user requested a free PPC account audit through the lead magnet on the homepage.`,
+        recaptchaToken
+      };
+
+      // Submit to the same API as contact form
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit. Please try again.');
+      }
+
+      // Track successful submission
+      trackLeadMagnetSubmit(formData);
+      console.log('Lead magnet submitted successfully:', result);
+      
+      setIsSubmitted(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        monthlySpend: '',
+        primaryGoal: ''
+      });
+
+    } catch (error) {
+      console.error('Lead magnet submission error:', error);
+      setError(error instanceof Error ? error.message : 'Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -63,10 +132,10 @@ export default function LeadMagnet({
         <div className="p-8">
           <div className="text-6xl mb-4">🎉</div>
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Thank You! Your Request is Confirmed
+            Thank You! Your Audit Request is Confirmed
           </h3>
           <p className="text-muted-foreground mb-6">
-            I'll be in touch within 24 hours with your audit results.
+            I've received your request and will personally review your accounts. You'll receive your detailed audit within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/results/" variant="outline">
@@ -118,6 +187,12 @@ export default function LeadMagnet({
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
+            {error && (
+              <div className="bg-destructive/10 border border-destructive/20 text-destructive px-4 py-3 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+            
             <div>
               <input
                 type="text"
@@ -195,13 +270,14 @@ export default function LeadMagnet({
               variant="gradient"
               size="lg"
               loading={isSubmitting}
+              disabled={isSubmitting}
               className="w-full"
             >
-              {isSubmitting ? 'Processing...' : 'Claim Your Free Audit'}
+              {isSubmitting ? 'Submitting...' : 'Claim Your Free Audit'}
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
-              By submitting, you agree to receive PPC insights via email. Unsubscribe anytime.
+              By submitting, you agree to receive your audit and PPC insights via email. Unsubscribe anytime.
             </p>
           </form>
         </div>

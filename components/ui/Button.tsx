@@ -56,6 +56,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
 
     if (href) {
+      // Log navigation for debugging
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Button with href:', href, 'external:', external);
+      }
+      
       const linkProps = external ? { href, target: '_blank', rel: 'noopener noreferrer' } : { href };
       return (
         <Link
