@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { validateContactForm, sanitizeContactForm, type ContactFormData } from '@/lib/utils/validation';
 
+// Configure Edge Runtime for Cloudflare Pages
+export const runtime = 'edge';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Secret key for reCAPTCHA validation should be set in environment variable
