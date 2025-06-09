@@ -4,12 +4,42 @@ import { validateContactForm, sanitizeContactForm, type ContactFormData } from '
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Secret key for reCAPTCHA validation should be set in environment variable
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY || '';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
-    // Validate and sanitize the form data
-    const sanitizedData = sanitizeContactForm(body);
+    const { recaptchaToken, ...formFields } = body as { recaptchaToken?: string } & ContactFormData;
+
+    // 1) Verify reCAPTCHA token (if present & secret configured)
+    if (RECAPTCHA_SECRET_KEY) {
+      if (!recaptchaToken) {
+        return NextResponse.json(
+          { error: 'reCAPTCHA validation failed. Please try again.' },
+          { status: 400 }
+        );
+      }
+
+      const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${encodeURIComponent(RECAPTCHA_SECRET_KEY)}&response=${encodeURIComponent(recaptchaToken)}`,
+      });
+
+      const recaptchaResult = (await recaptchaResponse.json()) as { success: boolean; score?: number };
+
+      if (!recaptchaResult.success || (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5)) {
+        return NextResponse.json(
+          { error: 'reCAPTCHA verification failed. Please retry.' },
+          { status: 400 }
+        );
+      }
+    }
+
+    // 2) Validate and sanitize the form data
+    const sanitizedData = sanitizeContactForm(formFields as ContactFormData);
     const validationErrors = validateContactForm(sanitizedData);
     
     if (validationErrors.length > 0) {

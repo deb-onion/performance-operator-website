@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { defaultMetadata, structuredData } from "@/lib/seo";
+import { defaultMetadata, structuredData, defaultViewport } from "@/lib/seo";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -12,6 +12,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = defaultMetadata;
+
+// Global viewport meta tag (moved from metadata per Next.js 15 guidance)
+export const viewport = defaultViewport;
 
 export default function RootLayout({
   children,

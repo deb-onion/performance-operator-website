@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { logError } from '@/lib/utils/errorLogger';
 import { validateContactForm, sanitizeContactForm, type ContactFormData, type ValidationError } from '@/lib/utils/validation';
@@ -29,6 +29,25 @@ export const GlassForm: React.FC<GlassFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<ValidationError[]>([]);
+
+  // Load reCAPTCHA script once when component mounts (if site key provided)
+  useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+    if (document.getElementById('recaptcha-script')) return; // prevent duplicate
+
+    const script = document.createElement('script');
+    script.id = 'recaptcha-script';
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
+
+  const executeRecaptcha = async (): Promise<string | null> => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey || !(window as any).grecaptcha) return null;
+    return await (window as any).grecaptcha.execute(siteKey, { action: 'submit' });
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -59,13 +78,16 @@ export const GlassForm: React.FC<GlassFormProps> = ({
     setIsSubmitting(true);
 
     try {
+      // 1) Obtain reCAPTCHA token (if configured)
+      const recaptchaToken = await executeRecaptcha();
+
       // Submit form to API endpoint
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(sanitizedData),
+        body: JSON.stringify({ ...sanitizedData, recaptchaToken }),
       });
 
       const result = await response.json();

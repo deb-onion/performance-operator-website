@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://performanceoperator.com/sitemap.xml',
+    sitemap: 'https://onlydeb.com/sitemap.xml',
   };
 } 

@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
 
+export const defaultViewport = 'width=device-width, initial-scale=1';
+
 export const defaultMetadata: Metadata = {
   title: 'onlydeb | Performance Marketing Specialist | 7+ Years Google Ads & Meta Ads Expert',
   description: '7+ years PPC Manager managing multi-million dollar campaigns. Achieved 400% ROAS, 47% CPC reduction. Google Ads & Meta Ads specialist for scaling brands.',
-  viewport: 'width=device-width, initial-scale=1',
   keywords: [
     'PPC Manager',
     'Google Ads',
@@ -75,6 +76,9 @@ export function generatePageMetadata(
       title: `${title} | onlydeb`,
       description,
       url: `https://onlydeb.com${path}`,
+    },
+    alternates: {
+      canonical: `https://onlydeb.com${path}`,
     },
     twitter: {
       ...defaultMetadata.twitter,
