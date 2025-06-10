@@ -52,9 +52,18 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString()
     });
 
+    // Return lead data in response for testing (remove this later)
     return NextResponse.json({ 
       success: true, 
-      message: 'Form submitted successfully' 
+      message: 'Form submitted successfully',
+      leadData: {
+        name: sanitizedData.name,
+        email: sanitizedData.email,
+        company: sanitizedData.company || 'Not provided',
+        budget: sanitizedData.budget || 'Not provided',
+        message: sanitizedData.message,
+        timestamp: new Date().toISOString()
+      }
     });
 
   } catch (error) {
