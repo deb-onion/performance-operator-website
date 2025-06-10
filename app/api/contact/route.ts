@@ -175,6 +175,16 @@ function generateEmailHTML(formData: ContactFormData, isLeadMagnet: boolean): st
 
 async function sendViaEmailJS(formData: ContactFormData, isLeadMagnet: boolean): Promise<boolean> {
   try {
+    const currentTime = new Date().toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZoneName: 'short'
+    });
+
     const emailData = {
       service_id: process.env.EMAILJS_SERVICE_ID,
       template_id: process.env.EMAILJS_TEMPLATE_ID,
@@ -186,7 +196,10 @@ async function sendViaEmailJS(formData: ContactFormData, isLeadMagnet: boolean):
         company: formData.company || 'Not provided',
         budget: formData.budget || 'Not provided',
         message: formData.message,
-        subject: isLeadMagnet ? 'New Lead Magnet Request' : 'New Contact Form Submission'
+        subject: isLeadMagnet ? 'New Lead Magnet Request' : 'New Contact Form Submission',
+        submission_time: currentTime,
+        form_type: isLeadMagnet ? 'Lead Magnet (FREE PPC Audit)' : 'Contact Form',
+        lead_priority: isLeadMagnet ? 'High - Lead Magnet' : 'Medium - Contact Form'
       }
     };
 
