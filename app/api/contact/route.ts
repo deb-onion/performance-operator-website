@@ -175,6 +175,12 @@ function generateEmailHTML(formData: ContactFormData, isLeadMagnet: boolean): st
 
 async function sendViaEmailJS(formData: ContactFormData, isLeadMagnet: boolean): Promise<boolean> {
   try {
+    console.log('🔧 EmailJS Environment Variables Check:');
+    console.log('- EMAILJS_SERVICE_ID:', process.env.EMAILJS_SERVICE_ID ? '✅ Present' : '❌ Missing');
+    console.log('- EMAILJS_TEMPLATE_ID:', process.env.EMAILJS_TEMPLATE_ID ? '✅ Present' : '❌ Missing');
+    console.log('- EMAILJS_PUBLIC_KEY:', process.env.EMAILJS_PUBLIC_KEY ? '✅ Present' : '❌ Missing');
+    console.log('- TO_EMAIL:', TO_EMAIL);
+
     const currentTime = new Date().toLocaleString('en-US', {
       weekday: 'long',
       year: 'numeric',
@@ -203,6 +209,14 @@ async function sendViaEmailJS(formData: ContactFormData, isLeadMagnet: boolean):
       }
     };
 
+    console.log('📧 EmailJS Request Data:', {
+      service_id: emailData.service_id,
+      template_id: emailData.template_id,
+      user_id: emailData.user_id ? 'Present' : 'Missing',
+      to_email: emailData.template_params.to_email,
+      from_name: emailData.template_params.from_name
+    });
+
     const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
       method: 'POST',
       headers: {
@@ -211,15 +225,21 @@ async function sendViaEmailJS(formData: ContactFormData, isLeadMagnet: boolean):
       body: JSON.stringify(emailData)
     });
 
+    console.log('📧 EmailJS Response Status:', response.status);
+    const responseText = await response.text();
+    console.log('📧 EmailJS Response Body:', responseText);
+
     if (response.ok) {
-      console.log('✅ Email sent via EmailJS');
+      console.log('✅ Email sent via EmailJS successfully!');
       return true;
     } else {
-      console.error('❌ EmailJS error:', await response.text());
+      console.error('❌ EmailJS API Error:');
+      console.error('Status:', response.status);
+      console.error('Response:', responseText);
       return false;
     }
   } catch (error) {
-    console.error('❌ EmailJS sending error:', error);
+    console.error('❌ EmailJS Network/Parse Error:', error);
     return false;
   }
 } 
