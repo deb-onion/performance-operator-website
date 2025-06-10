@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "About Debroop Naha | onlydeb",
+  title: "About Debroop Naha | OnlyDeb",
   description: "Meet Debroop Naha - 7+ years PPC Manager who delivered 400% ROAS at Google, Bloomstories, Dagamma. Performance marketing without agency bloat.",
 };
 
@@ -27,13 +27,12 @@ export default function AboutPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="aspect-square bg-[#EBF6FF] rounded-lg mb-4 md:mb-0">
-                {/* Placeholder for profile image */}
-                <div className="flex items-center justify-center h-full text-[#2D9CDB]">
-                  <svg className="w-24 h-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
+              <div className="aspect-square bg-[#EBF6FF] rounded-lg mb-4 md:mb-0 overflow-hidden">
+                <img 
+                  src="/profile.jpg" 
+                  alt="Debroop Naha - Performance Marketing Specialist"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

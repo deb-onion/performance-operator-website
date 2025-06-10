@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Results & Case Studies | onlydeb",
+  title: "Results & Case Studies | OnlyDeb",
   description: "Real results from Bloomstories, Dagamma, and more. 400% ROAS, 5x growth, $2M+ revenue. See proven PPC management results.",
 };
 

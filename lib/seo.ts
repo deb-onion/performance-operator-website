@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const defaultViewport = 'width=device-width, initial-scale=1';
 
 export const defaultMetadata: Metadata = {
-  title: 'onlydeb | Performance Marketing Specialist | 7+ Years Google Ads & Meta Ads Expert',
+  title: 'OnlyDeb | Performance Marketing Specialist | 7+ Years Google Ads & Meta Ads Expert',
   description: '7+ years PPC Manager managing multi-million dollar campaigns. Achieved 400% ROAS, 47% CPC reduction. Google Ads & Meta Ads specialist for scaling brands.',
   keywords: [
     'PPC Manager',
@@ -20,29 +20,29 @@ export const defaultMetadata: Metadata = {
     'campaign management'
   ],
   authors: [{ name: 'Debroop Naha' }],
-  creator: 'onlydeb',
+      creator: 'OnlyDeb',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://onlydeb.com',
-    siteName: 'onlydeb',
-    title: 'onlydeb | 7+ Years PPC Manager | Google Ads & Meta Ads Expert',
+          siteName: 'OnlyDeb',
+      title: 'OnlyDeb | 7+ Years PPC Manager | Google Ads & Meta Ads Expert',
     description: '7+ years PPC Manager managing multi-million dollar campaigns. Achieved 400% ROAS, 47% CPC reduction. Direct expertise, no agency bloat.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'onlydeb - Performance Marketing Specialist',
+        alt: 'OnlyDeb - Performance Marketing Specialist',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'onlydeb | 7+ Years PPC Manager | Google Ads & Meta Ads Expert',
+          title: 'OnlyDeb | 7+ Years PPC Manager | Google Ads & Meta Ads Expert',
     description: '7+ years PPC Manager managing multi-million dollar campaigns. Achieved 400% ROAS, 47% CPC reduction. Direct expertise, no agency bloat.',
     images: ['/og-image.jpg'],
-    creator: '@onlydeb',
+          creator: '@OnlyDeb',
   },
   robots: {
     index: true,
@@ -68,12 +68,12 @@ export function generatePageMetadata(
   keywords?: string[]
 ): Metadata {
   return {
-    title: `${title} | onlydeb`,
+    title: `${title} | OnlyDeb`,
     description,
     keywords: keywords || defaultMetadata.keywords,
     openGraph: {
       ...defaultMetadata.openGraph,
-      title: `${title} | onlydeb`,
+      title: `${title} | OnlyDeb`,
       description,
       url: `https://onlydeb.com${path}`,
     },
@@ -82,7 +82,7 @@ export function generatePageMetadata(
     },
     twitter: {
       ...defaultMetadata.twitter,
-      title: `${title} | onlydeb`,
+      title: `${title} | OnlyDeb`,
       description,
     },
   };
@@ -98,7 +98,7 @@ export const structuredData = {
   jobTitle: 'PPC Manager & Performance Marketing Specialist',
   worksFor: {
   '@type': 'Organization',
-    name: 'onlydeb',
+    name: 'OnlyDeb',
   },
   alumniOf: [
     {

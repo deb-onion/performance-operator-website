@@ -37,7 +37,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="text-foreground font-bold text-xl hover:text-primary transition-colors duration-200">
               <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
-                onlydeb
+                OnlyDeb
               </span>
             </Link>
           </div>

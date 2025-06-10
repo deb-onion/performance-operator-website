@@ -13,6 +13,7 @@
     "logs:functions": "npx wrangler pages deployment tail --compatibility-date=2023-06-10"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^5.0.1",
     "class-variance-authority": "^0.7.1",
     "next": "15.3.0",

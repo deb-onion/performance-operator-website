@@ -103,6 +103,24 @@ export const GlassForm: React.FC<GlassFormProps> = ({
 
       console.log('Form submitted successfully:', result);
       trackFormSubmission('glass_contact_form');
+
+      // Send email via EmailJS (browser-side)
+      if (result.leadData) {
+        console.log('📧 Sending email via EmailJS...');
+        try {
+          const { sendEmailViaEmailJS } = await import('@/lib/utils/emailjs');
+          const emailSent = await sendEmailViaEmailJS(result.leadData);
+          if (emailSent) {
+            console.log('✅ Email sent successfully to ads@onlydeb.com');
+          } else {
+            console.log('⚠️ Email sending failed, but form was submitted');
+          }
+        } catch (emailError) {
+          console.error('❌ Email sending error:', emailError);
+          // Don't fail the form submission if email fails
+        }
+      }
+
       setIsSubmitted(true);
       
       // Reset form

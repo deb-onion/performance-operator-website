@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="col-span-1 lg:col-span-2">
               <Link href="/" className="text-foreground font-bold text-xl hover:text-primary transition-colors duration-200">
                 <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
-                  onlydeb
+                  OnlyDeb
                 </span>
               </Link>
               <p className="mt-4 text-base text-muted-foreground max-w-md leading-relaxed">
@@ -115,7 +115,7 @@ export default function Footer() {
           
           <div className="mt-12 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {currentYear} onlydeb. All rights reserved.
+              &copy; {currentYear} OnlyDeb. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <Link 
