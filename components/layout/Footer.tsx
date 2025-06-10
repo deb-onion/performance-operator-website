@@ -98,16 +98,16 @@ export default function Footer() {
               <h3 className="text-base font-semibold text-foreground mb-4">Get In Touch</h3>
               <div className="space-y-3">
                 <a
-                  href="mailto:debroop9@gmail.com"
+                  href="mailto:ads@onlydeb.com"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block"
                 >
-                  debroop9@gmail.com
+                  ads@onlydeb.com
                 </a>
                 <p className="text-sm text-muted-foreground">
-                  📍 Based in Kolkata, India
+                  📍 Born in Kolkata
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  🌍 Serving clients worldwide
+                  🌍 Serving clients Worldwide
                 </p>
               </div>
             </div>

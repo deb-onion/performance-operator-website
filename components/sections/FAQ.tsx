@@ -151,7 +151,7 @@ export default function FAQ() {
                 Schedule a Consultation
               </a>
               <a 
-                href="mailto:debroop9@gmail.com"
+                href="mailto:ads@onlydeb.com"
                 className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background border border-primary text-primary hover:bg-primary hover:text-background hover:shadow-lg hover:shadow-primary/25 h-11 px-6 text-base"
               >
                 Email Direct

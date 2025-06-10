@@ -7,7 +7,10 @@
     "build": "next build",
     "build:cf": "next build && find .next -name '*.pack' -delete 2>/dev/null || true",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "view-leads": "node scripts/view-leads.js",
+    "logs": "npx wrangler pages deployment tail",
+    "logs:functions": "npx wrangler pages deployment tail --compatibility-date=2023-06-10"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
