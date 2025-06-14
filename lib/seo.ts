@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 export const defaultViewport = 'width=device-width, initial-scale=1';
 
 export const defaultMetadata: Metadata = {
+  metadataBase: new URL('https://onlydeb.com'),
   title: 'OnlyDeb | Performance Marketing Specialist | 7+ Years Google Ads & Meta Ads Expert',
   description: '7+ years PPC Manager managing multi-million dollar campaigns. Achieved 400% ROAS, 47% CPC reduction. Google Ads & Meta Ads specialist for scaling brands.',
   keywords: [

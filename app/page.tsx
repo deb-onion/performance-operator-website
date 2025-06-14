@@ -15,120 +15,120 @@ export default function Home() {
     <div key="bloomstories" className="p-8 h-full">
       <Link href="/results/" className="block h-full">
         <Card variant="result" highlight="primary" className="h-full cursor-pointer hover:scale-105 transition-transform duration-300">
-          <div className="flex justify-between items-start mb-6">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground">Bloomstories</h3>
-              <p className="text-muted-foreground mt-1">Subscription Platform Optimization</p>
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <h3 className="text-2xl font-bold text-foreground">Bloomstories</h3>
+            <p className="text-muted-foreground mt-1">Subscription Platform Optimization</p>
+          </div>
+          <div className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
+            Case Study
+          </div>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="text-center p-4 bg-accent rounded-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-foreground">5x</div>
+              <div className="text-sm text-muted-foreground">Sign-up Growth</div>
             </div>
-            <div className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
-              Case Study
+            <div className="text-center p-4 bg-accent rounded-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-success">350%</div>
+              <div className="text-sm text-muted-foreground">ROAS</div>
             </div>
           </div>
           
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="text-center p-4 bg-accent rounded-lg">
-                <div className="text-2xl sm:text-3xl font-bold text-foreground">5x</div>
-                <div className="text-sm text-muted-foreground">Sign-up Growth</div>
-              </div>
-              <div className="text-center p-4 bg-accent rounded-lg">
-                <div className="text-2xl sm:text-3xl font-bold text-success">350%</div>
-                <div className="text-sm text-muted-foreground">ROAS</div>
-              </div>
-            </div>
-            
-            <p className="text-muted-foreground">
-              Scaled monthly budget to $100K+ through strategic A/B testing and campaign optimization, 
-              achieving exceptional subscription transaction performance.
-            </p>
-            
+          <p className="text-muted-foreground">
+            Scaled monthly budget to $100K+ through strategic A/B testing and campaign optimization, 
+            achieving exceptional subscription transaction performance.
+          </p>
+          
             <div className="text-center">
               <span className="inline-flex items-center text-primary font-medium">
-                View Case Study →
+            View Case Study →
               </span>
             </div>
-          </div>
-        </Card>
+        </div>
+      </Card>
       </Link>
     </div>,
     
     <div key="dagamma" className="p-8 h-full">
       <Link href="/results/" className="block h-full">
         <Card variant="result" highlight="success" className="h-full cursor-pointer hover:scale-105 transition-transform duration-300">
-          <div className="flex justify-between items-start mb-6">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground">Dagamma Ecommerce</h3>
-              <p className="text-muted-foreground mt-1">Global Campaign Scaling</p>
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <h3 className="text-2xl font-bold text-foreground">Dagamma Ecommerce</h3>
+            <p className="text-muted-foreground mt-1">Global Campaign Scaling</p>
+          </div>
+          <div className="bg-success/10 text-success text-sm font-semibold px-3 py-1 rounded-full">
+            Case Study
+          </div>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="text-center p-4 bg-accent rounded-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-foreground">$300K+</div>
+              <div className="text-sm text-muted-foreground">Monthly Budget</div>
             </div>
-            <div className="bg-success/10 text-success text-sm font-semibold px-3 py-1 rounded-full">
-              Case Study
+            <div className="text-center p-4 bg-accent rounded-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-success">$2M+</div>
+              <div className="text-sm text-muted-foreground">Seasonal Revenue</div>
             </div>
           </div>
           
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="text-center p-4 bg-accent rounded-lg">
-                <div className="text-2xl sm:text-3xl font-bold text-foreground">$300K+</div>
-                <div className="text-sm text-muted-foreground">Monthly Budget</div>
-              </div>
-              <div className="text-center p-4 bg-accent rounded-lg">
-                <div className="text-2xl sm:text-3xl font-bold text-success">$2M+</div>
-                <div className="text-sm text-muted-foreground">Seasonal Revenue</div>
-              </div>
-            </div>
-            
-            <p className="text-muted-foreground">
-              Maintained CPA below $8 globally while scaling campaigns and achieving 
-              exceptional seasonal performance across multiple markets.
-            </p>
-            
+          <p className="text-muted-foreground">
+            Maintained CPA below $8 globally while scaling campaigns and achieving 
+            exceptional seasonal performance across multiple markets.
+          </p>
+          
             <div className="text-center">
               <span className="inline-flex items-center text-primary font-medium">
-                View Case Study →
+            View Case Study →
               </span>
             </div>
-          </div>
-        </Card>
+        </div>
+      </Card>
       </Link>
     </div>,
 
     <div key="google" className="p-8 h-full">
       <Link href="/about/" className="block h-full">
         <Card variant="result" highlight="glow" className="h-full cursor-pointer hover:scale-105 transition-transform duration-300">
-          <div className="flex justify-between items-start mb-6">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground">Google</h3>
-              <p className="text-muted-foreground mt-1">Senior Associate Performance</p>
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <h3 className="text-2xl font-bold text-foreground">Google</h3>
+            <p className="text-muted-foreground mt-1">Senior Associate Performance</p>
+          </div>
+          <div className="bg-warning/10 text-warning text-sm font-semibold px-3 py-1 rounded-full">
+            Experience
+          </div>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="text-center p-4 bg-accent rounded-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-foreground">400+</div>
+              <div className="text-sm text-muted-foreground">Accounts/Quarter</div>
             </div>
-            <div className="bg-warning/10 text-warning text-sm font-semibold px-3 py-1 rounded-full">
-              Experience
+            <div className="text-center p-4 bg-accent rounded-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-success">100%</div>
+              <div className="text-sm text-muted-foreground">CSAT Score</div>
             </div>
           </div>
           
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="text-center p-4 bg-accent rounded-lg">
-                <div className="text-2xl sm:text-3xl font-bold text-foreground">400+</div>
-                <div className="text-sm text-muted-foreground">Accounts/Quarter</div>
-              </div>
-              <div className="text-center p-4 bg-accent rounded-lg">
-                <div className="text-2xl sm:text-3xl font-bold text-success">100%</div>
-                <div className="text-sm text-muted-foreground">CSAT Score</div>
-              </div>
-            </div>
-            
-            <p className="text-muted-foreground">
-              Managed 400+ accounts quarterly with 100% CSAT scores for three consecutive quarters, 
-              building foundational expertise in campaign optimization at scale.
-            </p>
-            
+          <p className="text-muted-foreground">
+            Managed 400+ accounts quarterly with 100% CSAT scores for three consecutive quarters, 
+            building foundational expertise in campaign optimization at scale.
+          </p>
+          
             <div className="text-center">
               <span className="inline-flex items-center text-primary font-medium">
-                Learn More →
+            Learn More →
               </span>
             </div>
-          </div>
-        </Card>
+        </div>
+      </Card>
       </Link>
     </div>
   ];

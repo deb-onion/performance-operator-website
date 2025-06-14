@@ -134,7 +134,7 @@ TO_EMAIL=ads@onlydeb.com
    ```
 
 2. **Test forms:**
-   - Visit `/contact` or `/glass-form-demo`
+   - Visit `/contact`
    - Fill out and submit a form
    - Check for email delivery
 
@@ -226,7 +226,7 @@ When deploying to production (Vercel, Netlify, etc.):
 ## 🎯 Next Steps
 
 1. **Set up email service** (Resend recommended)
-2. **Test both forms** (`/contact` and `/glass-form-demo`)
+2. **Test contact form** (`/contact`)
 3. **Add environment variables**
 4. **Deploy to production**
 5. **Monitor lead flow**

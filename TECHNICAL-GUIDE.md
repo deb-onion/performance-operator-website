@@ -1484,7 +1484,7 @@ trackCTAClick('Book Strategy Call', 'services_page');
 
 **Files to Edit:**
 1. `app/contact/page.tsx` (main contact page)
-2. `app/contact-glass/page.tsx` (alternative contact form)
+
 3. `components/layout/Footer.tsx` (footer links)
 
 **Current Placeholders:**

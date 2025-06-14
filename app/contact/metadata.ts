@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact | onlydeb",
-  description: "Get in touch to discuss your marketing goals. Response within 24 hours.",
-  alternates: {
-    canonical: "https://onlydeb.com/contact",
-  },
-}; 
+export const metadata = generatePageMetadata(
+  "Contact",
+  "Get in touch to discuss your marketing goals. Response within 24 hours.",
+  "/contact"
+); 

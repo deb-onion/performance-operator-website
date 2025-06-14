@@ -1,11 +1,13 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "PPC Management Services | OnlyDeb",
-  description: "Google Ads & Meta Ads management by Debroop Naha. 7+ years experience, 400% ROAS achieved, $5M+ ad spend managed. Results-driven PPC services.",
-};
+export const metadata = generatePageMetadata(
+  "PPC Management Services",
+  "Google Ads & Meta Ads management by Debroop Naha. 7+ years experience, 400% ROAS achieved, $5M+ ad spend managed. Results-driven PPC services.",
+  "/services"
+);
 
 const services = [
   {

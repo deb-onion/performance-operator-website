@@ -8,8 +8,8 @@ export const runtime = 'edge';
 // const resend = new Resend(process.env.RESEND_API_KEY); // TEMPORARILY DISABLED
 
 // Environment variables for EmailJS
-const TO_EMAIL = process.env.TO_EMAIL || 'ads@onlydeb.com';
-const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY || '';
+  const _TO_EMAIL = process.env.TO_EMAIL || 'ads@onlydeb.com';
+  const _RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY || '';
 
 export async function POST(request: NextRequest) {
   console.log('🚀 Contact API called');
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     console.log('📝 Form data received:', { ...body, recaptchaToken: body.recaptchaToken ? '[PRESENT]' : '[MISSING]' });
     
-    const { recaptchaToken, ...formFields } = body as { recaptchaToken?: string } & ContactFormData;
+    const { recaptchaToken: _recaptchaToken, ...formFields } = body as { recaptchaToken?: string } & ContactFormData;
 
     // 1) TEMPORARILY SKIP reCAPTCHA verification
     console.log('🔐 reCAPTCHA TEMPORARILY DISABLED FOR DEBUGGING');
@@ -56,10 +56,10 @@ export async function POST(request: NextRequest) {
       message: 'Thank you for your message! We\'ll get back to you within 24 hours.',
       // Pass back data for frontend EmailJS call
       leadData: {
-        name: sanitizedData.name,
-        email: sanitizedData.email,
-        company: sanitizedData.company || 'Not provided',
-        budget: sanitizedData.budget || 'Not provided',
+      name: sanitizedData.name,
+      email: sanitizedData.email,
+      company: sanitizedData.company || 'Not provided',
+      budget: sanitizedData.budget || 'Not provided',
         message: sanitizedData.message,
         isLeadMagnet,
         timestamp: new Date().toLocaleString()

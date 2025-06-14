@@ -12,7 +12,7 @@ Both your contact forms (regular and glass form) are now connected to a real API
 - ⚠️ Email delivery needs setup (see below)
 
 ## Quick Test:
-1. Visit `/contact` or `/glass-form-demo`
+1. Visit `/contact`
 2. Fill out and submit a form
 3. Check browser console (F12) - you'll see the lead data
 4. Check your terminal - you'll see server logs

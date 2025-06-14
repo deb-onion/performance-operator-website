@@ -1,11 +1,13 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Debroop Naha | OnlyDeb",
-  description: "Meet Debroop Naha - 7+ years PPC Manager who delivered 400% ROAS at Google, Bloomstories, Dagamma. Performance marketing without agency bloat.",
-};
+export const metadata = generatePageMetadata(
+  "About Debroop Naha",
+  "Meet Debroop Naha - 7+ years PPC Manager who delivered 400% ROAS at Google, Bloomstories, Dagamma. Performance marketing without agency bloat.",
+  "/about"
+);
 
 export default function AboutPage() {
   return (

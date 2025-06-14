@@ -54,7 +54,7 @@ This website serves as a comprehensive platform for performance marketing specia
 │   ├── globals.css         # Dark/light theme variables & animations
 │   ├── about/page.tsx      # About page
 │   ├── contact/page.tsx    # Contact form with reCAPTCHA
-│   ├── contact-glass/      # Alternative glass-morphism contact form
+
 │   ├── services/page.tsx   # Services & pricing
 │   ├── results/page.tsx    # Case studies & metrics
 │   ├── work-with-me/       # Booking & collaboration
@@ -89,16 +89,16 @@ This website serves as a comprehensive platform for performance marketing specia
 ## 🛠️ Getting Started
 
 ### **1. Clone & Install**
-```bash
-git clone <repository-url>
-cd performance-operator-website
+   ```bash
+   git clone <repository-url>
+   cd performance-operator-website
 npm install
-```
+   ```
 
 ### **2. Environment Setup**
 Create `.env.local` with these variables:
 
-```bash
+   ```bash
 # Analytics & SEO
 NEXT_PUBLIC_GA_ID=G-QVK20BPH9M
 NEXT_PUBLIC_SITE_URL=https://onlydeb.com
@@ -117,8 +117,8 @@ NEXT_PUBLIC_GOOGLE_VERIFICATION=your_verification_code
 ```
 
 ### **3. Development**
-```bash
-npm run dev
+   ```bash
+   npm run dev
 # Visit http://localhost:3000
 ```
 
@@ -146,7 +146,7 @@ npm start
 | **Results** | `/results` | Detailed case studies, metrics, client testimonials |
 | **Work With Me** | `/work-with-me` | Google Calendar booking, FAQ, collaboration process |
 | **Contact** | `/contact` | Contact form with reCAPTCHA validation |
-| **Contact Glass** | `/contact-glass` | Alternative glass-morphism contact form |
+
 
 ## 🎛️ Component System
 

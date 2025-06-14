@@ -104,7 +104,7 @@ This user requested a free PPC account audit through the lead magnet on the home
       }
 
       // Track successful submission
-      trackLeadMagnetSubmit(formData);
+    trackLeadMagnetSubmit(formData);
       console.log('Lead magnet submitted successfully:', result);
 
       // Send email via EmailJS (browser-side)
@@ -124,7 +124,7 @@ This user requested a free PPC account audit through the lead magnet on the home
         }
       }
       
-      setIsSubmitted(true);
+    setIsSubmitted(true);
       
       // Reset form
       setFormData({
@@ -139,7 +139,7 @@ This user requested a free PPC account audit through the lead magnet on the home
       console.error('Lead magnet submission error:', error);
       setError(error instanceof Error ? error.message : 'Network error. Please try again.');
     } finally {
-      setIsSubmitting(false);
+    setIsSubmitting(false);
     }
   };
 

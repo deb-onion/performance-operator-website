@@ -63,8 +63,8 @@ export default function YourPage() {
 
 Visit these pages to see the glass form in action:
 
-- `/glass-form-demo` - Comprehensive demo with multiple examples
-- `/contact-glass` - Alternative contact page using the glass form
+
+
 
 ## Form Fields
 

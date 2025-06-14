@@ -1,11 +1,13 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Work With Me | Performance Marketing Operator",
-  description: "Ready to scale with a performance marketing operator? Book a strategy call to discuss your goals and growth potential.",
-};
+export const metadata = generatePageMetadata(
+  "Work With Me | Performance Marketing Operator",
+  "Ready to scale with a performance marketing operator? Book a strategy call to discuss your goals and growth potential.",
+  "/work-with-me"
+);
 
 const idealClients = [
   {
