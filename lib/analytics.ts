@@ -60,7 +60,7 @@ export const trackEvent = (
 export const trackLeadMagnetSubmit = (formData: Record<string, unknown>) => {
   trackEvent('lead_magnet_submit', {
     event_category: 'conversion',
-    event_label: formData.primaryGoal || 'unknown',
+    event_label: String(formData.primaryGoal) || 'unknown',
     value: 500,
     custom_parameters: {
       monthly_spend: formData.monthlySpend,
