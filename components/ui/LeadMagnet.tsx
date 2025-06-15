@@ -5,6 +5,15 @@ import { Card } from './Card';
 import { Button } from './Button';
 import { trackLeadMagnetSubmit } from '@/lib/analytics';
 
+// Extend Window interface for reCAPTCHA
+declare global {
+  interface Window {
+    grecaptcha?: {
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 interface LeadMagnetProps {
   title?: string;
   subtitle?: string;
@@ -15,7 +24,7 @@ interface LeadMagnetProps {
 export default function LeadMagnet({ 
   title = "Get Your FREE PPC Account Audit", 
   subtitle = "I'll personally review your Google Ads & Meta Ads accounts and provide actionable insights to improve performance within 48 hours.",
-  offerType = 'audit',
+  offerType: _offerType = 'audit',
   className = "" 
 }: LeadMagnetProps) {
   const [formData, setFormData] = useState({
@@ -44,8 +53,8 @@ export default function LeadMagnet({
 
   const executeRecaptcha = async (): Promise<string | null> => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (!siteKey || !(window as any).grecaptcha) return null;
-    return await (window as any).grecaptcha.execute(siteKey, { action: 'submit' });
+    if (!siteKey || !window.grecaptcha) return null;
+    return await window.grecaptcha.execute(siteKey, { action: 'submit' });
   };
 
   const benefits = [

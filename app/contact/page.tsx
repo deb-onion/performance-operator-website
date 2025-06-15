@@ -8,6 +8,15 @@ import { logError } from "@/lib/utils/errorLogger";
 import { validateContactForm, sanitizeContactForm, type ContactFormData, type ValidationError } from "@/lib/utils/validation";
 import { trackFormSubmission } from "@/lib/analytics";
 
+// Extend Window interface for reCAPTCHA
+declare global {
+  interface Window {
+    grecaptcha?: {
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const contactMethods = [
   {
     title: "Email",
@@ -56,8 +65,8 @@ export default function ContactPage() {
 
   const executeRecaptcha = async (): Promise<string | null> => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (!siteKey || !(window as any).grecaptcha) return null;
-    return await (window as any).grecaptcha.execute(siteKey, { action: 'submit' });
+    if (!siteKey || !window.grecaptcha) return null;
+    return await window.grecaptcha.execute(siteKey, { action: 'submit' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -154,13 +163,13 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-[#F9FAFB] to-white py-16 md:py-24 lg:py-32">
+      <div className="bg-gradient-to-b from-background via-background to-secondary/20 py-16 md:py-24 lg:py-32">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0F2E4C] leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               Let's Connect
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-[#4F4F4F]">
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground">
               Ready to discuss your marketing goals? I respond to all inquiries within 24 hours.
             </p>
           </div>
@@ -171,14 +180,14 @@ export default function ContactPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="p-8 text-center">
-                <h3 className="text-xl font-semibold text-[#1A1A1A] mb-4">
+              <Card key={index} className="p-8 text-center bg-card border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
                   {method.title}
                 </h3>
-                <p className="text-[#4F4F4F] mb-6">
+                <p className="text-muted-foreground mb-6">
                   {method.description}
                 </p>
-                <p className="text-lg font-semibold text-[#2D9CDB] mb-6">
+                <p className="text-lg font-semibold text-primary mb-6">
                   {method.contact}
                 </p>
                 <Button 
@@ -194,14 +203,14 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#F9FAFB]">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F2E4C] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Send Me a Message
               </h2>
-              <p className="text-lg text-[#4F4F4F] mb-8">
+              <p className="text-lg text-muted-foreground mb-8">
                 Tell me about your brand and I'll tell you how to scale it. The more details you provide, the better I can help.
               </p>
 

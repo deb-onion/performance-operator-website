@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 
 interface AnimatedCounterProps {
   end: number;
@@ -25,6 +25,21 @@ export function AnimatedCounter({
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
 
+  const startAnimation = useCallback(() => {
+    const increment = end / (duration / 16);
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(current);
+      }
+    }, 16);
+  }, [end, duration]);
+
   useEffect(() => {
     if (!startOnView) {
       startAnimation();
@@ -46,22 +61,7 @@ export function AnimatedCounter({
     }
 
     return () => observer.disconnect();
-  }, [startOnView, isVisible]);
-
-  const startAnimation = () => {
-    const increment = end / (duration / 16);
-    let current = 0;
-    
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(current);
-      }
-    }, 16);
-  };
+  }, [startOnView, isVisible, startAnimation]);
 
   const formatNumber = (num: number) => {
     if (decimals > 0) {

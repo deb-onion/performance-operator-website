@@ -40,8 +40,6 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, href, external = false, loading = false, children, disabled, ...props }, ref) => {
-    const Component = href ? Link : 'button';
-    
     const buttonContent = (
       <>
         {loading && (

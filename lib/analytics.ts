@@ -3,10 +3,10 @@
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    fbq: (...args: any[]) => void;
-    dataLayer: any[];
-    hj: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
+    fbq: (...args: unknown[]) => void;
+    dataLayer: unknown[];
+    hj: (...args: unknown[]) => void;
   }
 }
 
@@ -30,7 +30,7 @@ interface AnalyticsEventData {
   event_category?: string;
   event_label?: string;
   value?: number;
-  custom_parameters?: Record<string, any>;
+  custom_parameters?: Record<string, unknown>;
 }
 
 // Track events with multiple analytics platforms
@@ -57,7 +57,7 @@ export const trackEvent = (
 };
 
 // Specific tracking functions
-export const trackLeadMagnetSubmit = (formData: any) => {
+export const trackLeadMagnetSubmit = (formData: Record<string, unknown>) => {
   trackEvent('lead_magnet_submit', {
     event_category: 'conversion',
     event_label: formData.primaryGoal || 'unknown',

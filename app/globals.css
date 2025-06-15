@@ -10,6 +10,7 @@
   --muted: #404040;
   --muted-foreground: #a1a1aa;
   --border: #262626;
+  --card: #1a1a1a;
   --primary: #3b82f6;
   --primary-hover: #2563eb;
   --success: #10b981;
@@ -30,6 +31,7 @@
   --muted: #e2e8f0;
   --muted-foreground: #64748b;
   --border: #e2e8f0;
+  --card: #ffffff;
   --primary: #3b82f6;
   --primary-hover: #2563eb;
   --success: #10b981;
@@ -49,6 +51,7 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-card: var(--card);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-success: var(--success);

@@ -6,6 +6,15 @@ import { logError } from '@/lib/utils/errorLogger';
 import { validateContactForm, sanitizeContactForm, type ContactFormData, type ValidationError } from '@/lib/utils/validation';
 import { trackFormSubmission } from '@/lib/analytics';
 
+// Extend Window interface for reCAPTCHA
+declare global {
+  interface Window {
+    grecaptcha?: {
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 interface GlassFormProps {
   title?: string;
   subtitle?: string;
@@ -45,8 +54,8 @@ export const GlassForm: React.FC<GlassFormProps> = ({
 
   const executeRecaptcha = async (): Promise<string | null> => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (!siteKey || !(window as any).grecaptcha) return null;
-    return await (window as any).grecaptcha.execute(siteKey, { action: 'submit' });
+    if (!siteKey || !window.grecaptcha) return null;
+    return await window.grecaptcha.execute(siteKey, { action: 'submit' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

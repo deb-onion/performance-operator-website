@@ -64,7 +64,121 @@ const metrics = [
   },
 ];
 
-// Original case studies from your existing page - Enhanced
+// New breakthrough case studies - Enhanced for SEO and mobile
+const breakthroughCases = [
+  {
+    title: "🧳 Black Voyage",
+    subtitle: "Shopify Luggage eCom (2025-Present)",
+    results: "ROAS grew from 1.69 → 4.26 in under a month | Purchases doubled MoM",
+    actions: [
+      "Rebuilt Google Ads + PMax + branded exclusions",
+      "Merchant Center + tracking cleanup", 
+      "Launched full-funnel campaigns"
+    ],
+    chartData: [
+      { label: 'Week 1', value: 1.69 },
+      { label: 'Week 2', value: 2.34 },
+      { label: 'Week 3', value: 3.12 },
+      { label: 'Week 4', value: 4.26 }
+    ],
+    color: '#3b82f6',
+    highlight: "4.26 ROAS",
+    seoKeywords: "Shopify PPC, luggage ecommerce, Google Ads optimization"
+  },
+  {
+    title: "💎 Growthpep",
+    subtitle: "Jewelry eCommerce (Lockdown Period)",
+    results: "9.78 ROAS during national lockdown | Record performance achieved",
+    actions: [
+      "Hybrid Google + Native Ads strategy",
+      "Data-first bid + copy refinement"
+    ],
+    chartData: [
+      { label: 'Pre-lockdown', value: 3.2 },
+      { label: 'Early lockdown', value: 5.8 },
+      { label: 'Peak lockdown', value: 9.78 },
+      { label: 'Post-lockdown', value: 6.4 }
+    ],
+    color: '#8b5cf6',
+    highlight: "9.78 ROAS",
+    seoKeywords: "jewelry ecommerce PPC, lockdown advertising, native ads"
+  },
+  {
+    title: "🎯 Mandarin Duck",
+    subtitle: "Archery Gear eCommerce (2019-2020)",
+    results: "400% ROAS | Consistent quarterly performance",
+    actions: [
+      "Feed + bid optimization",
+      "Audience refinement"
+    ],
+    chartData: [
+      { label: 'Q1', value: 2.1 },
+      { label: 'Q2', value: 3.2 },
+      { label: 'Q3', value: 4.0 },
+      { label: 'Q4', value: 4.1 }
+    ],
+    color: '#ef4444',
+    highlight: "400% ROAS",
+    seoKeywords: "archery gear PPC, sports equipment advertising, Google Shopping"
+  },
+  {
+    title: "🚪 Garage Doors LA",
+    subtitle: "Local Lead-Gen (2018-2019)",
+    results: "500+ daily leads | Local market domination",
+    actions: [
+      "Lead funnel PPC",
+      "Media + bid planning"
+    ],
+    chartData: [
+      { label: 'Week 1', value: 125 },
+      { label: 'Week 2', value: 285 },
+      { label: 'Week 3', value: 420 },
+      { label: 'Week 4', value: 510 }
+    ],
+    color: '#06b6d4',
+    highlight: "500+ Leads/Day",
+    seoKeywords: "local lead generation, garage door leads, local PPC"
+  },
+  {
+    title: "✈️ Dubai Visa",
+    subtitle: "Hybrid eCom + Lead Model (2020-2021)",
+    results: "400% ROAS | Multi-model campaign success",
+    actions: [
+      "Multi-model campaign execution",
+      "Media plans, ROI tracking"
+    ],
+    chartData: [
+      { label: 'Launch', value: 1.8 },
+      { label: 'Month 2', value: 2.9 },
+      { label: 'Month 4', value: 3.7 },
+      { label: 'Month 6', value: 4.0 }
+    ],
+    color: '#ec4899',
+    highlight: "400% ROAS",
+    seoKeywords: "visa services PPC, travel industry advertising, Dubai marketing"
+  },
+  {
+    title: "🌱 Bloomstories",
+    subtitle: "Subscription Audio Entertainment (Extended)",
+    results: "350% ROAS | 5x monthly signups",
+    actions: [
+      "Keyword + ad copy refinement (NSFW-safe)",
+      "A/B creative + landing page testing",
+      "Analytics → continuous insight cycles"
+    ],
+    chartData: [
+      { label: 'Month 1', value: 120 },
+      { label: 'Month 6', value: 280 },
+      { label: 'Month 12', value: 450 },
+      { label: 'Month 18', value: 600 }
+    ],
+    color: '#10b981',
+    highlight: "5x Growth",
+    seoKeywords: "subscription platform PPC, audio entertainment advertising, Apple Search Ads"
+  }
+];
+
+// Original case studies from your existing page - Enhanced for SEO
 const caseStudies = [
   {
     title: "Bloomstories",
@@ -90,7 +204,8 @@ const caseStudies = [
       { label: 'Month 12', value: 280 },
       { label: 'Month 18', value: 350 }
     ],
-    color: '#10b981'
+    color: '#10b981',
+    seoKeywords: "subscription platform case study, Bloomstories PPC management, audio entertainment advertising"
   },
   {
     title: "Dagamma Ecommerce",
@@ -116,7 +231,8 @@ const caseStudies = [
       { label: 'Q3', value: 350 },
       { label: 'Q4', value: 400 }
     ],
-    color: '#f59e0b'
+    color: '#f59e0b',
+    seoKeywords: "Dagamma ecommerce case study, Baby Doppler PPC, global campaign scaling"
   },
   {
     title: "Freelance Portfolio",
@@ -141,143 +257,41 @@ const caseStudies = [
       { label: 'Year 2', value: 320 },
       { label: 'Year 3', value: 400 }
     ],
-    color: '#3b82f6'
-  }
-];
-
-// New breakthrough case studies
-const breakthroughCases = [
-  {
-    title: "🧳 Black Voyage",
-    subtitle: "Shopify Luggage eCom (2025-Present)",
-    results: "ROAS grew from 1.69 → 4.26 in under a month | Purchases doubled MoM",
-    actions: [
-      "Rebuilt Google Ads + PMax + branded exclusions",
-      "Merchant Center + tracking cleanup", 
-      "Launched full-funnel campaigns"
-    ],
-    chartData: [
-      { label: 'Week 1', value: 1.69 },
-      { label: 'Week 2', value: 2.34 },
-      { label: 'Week 3', value: 3.12 },
-      { label: 'Week 4', value: 4.26 }
-    ],
-    color: '#3b82f6'
-  },
-  {
-    title: "💎 Growthpep",
-    subtitle: "Jewelry eCommerce (Lockdown Period)",
-    results: "9.78 ROAS during national lockdown | Record performance achieved",
-    actions: [
-      "Hybrid Google + Native Ads strategy",
-      "Data-first bid + copy refinement"
-    ],
-    chartData: [
-      { label: 'Pre-lockdown', value: 3.2 },
-      { label: 'Early lockdown', value: 5.8 },
-      { label: 'Peak lockdown', value: 9.78 },
-      { label: 'Post-lockdown', value: 6.4 }
-    ],
-    color: '#8b5cf6'
-  },
-  {
-    title: "🎯 Mandarin Duck",
-    subtitle: "Archery Gear eCommerce (2019-2020)",
-    results: "400% ROAS | Consistent quarterly performance",
-    actions: [
-      "Feed + bid optimization",
-      "Audience refinement"
-    ],
-    chartData: [
-      { label: 'Q1', value: 2.1 },
-      { label: 'Q2', value: 3.2 },
-      { label: 'Q3', value: 4.0 },
-      { label: 'Q4', value: 4.1 }
-    ],
-    color: '#ef4444'
-  },
-  {
-    title: "🚪 Garage Doors LA",
-    subtitle: "Local Lead-Gen (2018-2019)",
-    results: "500+ daily leads | Local market domination",
-    actions: [
-      "Lead funnel PPC",
-      "Media + bid planning"
-    ],
-    chartData: [
-      { label: 'Week 1', value: 125 },
-      { label: 'Week 2', value: 285 },
-      { label: 'Week 3', value: 420 },
-      { label: 'Week 4', value: 510 }
-    ],
-    color: '#06b6d4'
-  },
-  {
-    title: "✈️ Dubai Visa",
-    subtitle: "Hybrid eCom + Lead Model (2020-2021)",
-    results: "400% ROAS | Multi-model campaign success",
-    actions: [
-      "Multi-model campaign execution",
-      "Media plans, ROI tracking"
-    ],
-    chartData: [
-      { label: 'Launch', value: 1.8 },
-      { label: 'Month 2', value: 2.9 },
-      { label: 'Month 4', value: 3.7 },
-      { label: 'Month 6', value: 4.0 }
-    ],
-    color: '#ec4899'
-  },
-  {
-    title: "🌱 Bloomstories",
-    subtitle: "Subscription Audio Entertainment (Extended)",
-    results: "350% ROAS | 5x monthly signups",
-    actions: [
-      "Keyword + ad copy refinement (NSFW-safe)",
-      "A/B creative + landing page testing",
-      "Analytics → continuous insight cycles"
-    ],
-    chartData: [
-      { label: 'Month 1', value: 120 },
-      { label: 'Month 6', value: 280 },
-      { label: 'Month 12', value: 450 },
-      { label: 'Month 18', value: 600 }
-    ],
-    color: '#10b981'
+    color: '#3b82f6',
+    seoKeywords: "freelance PPC portfolio, multi-industry advertising, automotive travel ecommerce PPC"
   }
 ];
 
 export default function ResultsPage() {
   return (
     <>
-      {/* Enhanced Hero Section */}
-      <div className="relative bg-gradient-to-br from-background via-secondary to-accent py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent" />
+      {/* Enhanced Hero Section - Fixed background consistency */}
+      <div className="relative bg-gradient-to-br from-background via-background to-background py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent" />
         
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse-soft">
+            <div className="inline-block bg-primary/10 text-primary px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 animate-pulse-soft">
               🚀 Solo PPC Specialist Results
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4 md:mb-6">
               Results That Outperform{' '}
               <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
                 Agencies
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 leading-relaxed px-4 sm:px-0">
               Data-driven campaigns. Full attention on each brand. Outcomes that speak louder than promises.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/work-with-me/" size="lg" variant="gradient">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
+              <Button href="/work-with-me/" size="lg" variant="gradient" className="w-full sm:w-auto">
                 Get Your Free PPC Blueprint
               </Button>
-              <Button href="#case-studies" size="lg" variant="outline">
-                View Case Studies
+              <Button href="#individual-success" size="lg" variant="outline" className="w-full sm:w-auto">
+                View Success Stories
               </Button>
             </div>
           </div>
@@ -285,9 +299,9 @@ export default function ResultsPage() {
       </div>
 
       {/* Animated Metrics Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16 lg:py-24">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16">
             {metrics.map((metric, index) => (
               <MetricCard
                 key={index}
@@ -299,7 +313,7 @@ export default function ResultsPage() {
                 prefix={metric.prefix}
                 suffix={metric.suffix}
                 isAnimated={true}
-                className="animate-fade-in-up"
+                className="animate-fade-in-up text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               />
             ))}
@@ -307,66 +321,158 @@ export default function ResultsPage() {
         </Container>
       </section>
 
-      {/* Original Case Studies - Enhanced */}
-      <section className="py-16 md:py-24 bg-[#F9FAFB]">
+      {/* Individual Brand Success Stories Section - MOVED ABOVE CASE STUDIES */}
+      <section id="individual-success" className="py-12 md:py-16 lg:py-24 bg-secondary/30">
+        <Container>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+              🧩 Individual Brand Success Stories
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
+              Latest campaigns showcasing breakthrough results across diverse industries and business models.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {breakthroughCases.map((study, index) => (
+              <Card key={index} variant="service" className="group hover:scale-105 transition-all duration-300 bg-card border-border/50 h-full relative overflow-hidden shadow-sm">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-br opacity-5" 
+                    style={{ 
+                      background: `linear-gradient(135deg, ${study.color}20 0%, ${study.color}05 50%, transparent 100%)` 
+                    }}
+                  />
+                </div>
+                <div className="p-4 md:p-6 flex flex-col h-full relative z-10">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                    <h3 className="text-lg md:text-xl font-bold text-foreground">{study.title}</h3>
+                    <div className="bg-primary/10 text-primary px-2 md:px-3 py-1 rounded-full text-xs font-semibold self-start sm:self-center">
+                      {study.highlight}
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{study.subtitle}</p>
+                  
+                  <div className="bg-muted/20 p-3 md:p-4 rounded-lg mb-4 border border-border/30">
+                    <h4 className="font-semibold text-foreground mb-2 text-sm">📈 Results:</h4>
+                    <p className="text-primary font-medium text-sm leading-relaxed">{study.results}</p>
+                  </div>
+
+                  <div className="mb-4 md:mb-6 flex-grow">
+                    <h4 className="font-semibold text-foreground mb-3 text-sm">🎯 Actions Taken:</h4>
+                    <ul className="space-y-2">
+                      {study.actions.map((action, actionIndex) => (
+                        <li key={actionIndex} className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5 text-xs flex-shrink-0">•</span>
+                          <span className="text-xs text-muted-foreground leading-relaxed">{action}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-muted/30 p-4 md:p-5 rounded-lg mt-auto border border-border/50">
+                    <div className="flex items-center justify-between mb-4">
+                      <h5 className="font-semibold text-foreground text-sm">📈 Performance Trend</h5>
+                      <div className="w-3 h-3 rounded-full" style={{ backgroundColor: study.color }}></div>
+                    </div>
+                    <SimpleChart
+                      data={study.chartData}
+                      type="line"
+                      height={140}
+                      color={study.color}
+                      variant="detailed"
+                      showGrid={true}
+                      animated={true}
+                      className="bg-card/80 rounded-lg p-2 border border-border/30"
+                    />
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          {/* SEO-friendly link to detailed case studies */}
+          <div className="text-center mt-12 md:mt-16">
+            <Button href="#case-studies" variant="outline" size="lg" className="mx-auto">
+              View Detailed Case Studies
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Original Case Studies Section - Enhanced */}
+      <section id="case-studies" className="py-16 md:py-24 bg-secondary/30">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F2E4C]">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Case Studies
             </h2>
-            <p className="mt-4 text-lg text-[#4F4F4F] max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
               Deep dives into how strategic performance marketing drives real business growth.
             </p>
           </div>
 
           <div className="space-y-16">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="p-8 lg:p-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  {/* Overview */}
-                  <div className="lg:col-span-1">
-                    <div className="inline-block bg-[#EBF6FF] text-[#2D9CDB] text-sm font-semibold px-3 py-1 rounded-full mb-4">
-                      Case Study
+              <Card key={index} className="p-8 lg:p-12 bg-card border-border/50 shadow-sm">
+                <div className="space-y-8">
+                  {/* Header Section */}
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                    <div className="lg:w-1/2">
+                      <div className="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-4">
+                        Case Study
+                      </div>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                        {study.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-2 text-lg">{study.industry}</p>
+                      <p className="text-sm text-muted-foreground mb-6">Platform: {study.platform}</p>
+                      
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-2">Challenge</h4>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{study.challenge}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-2">Strategy</h4>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{study.strategy}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-2">Timeframe</h4>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{study.timeframe}</p>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#0F2E4C] mb-2">
-                      {study.title}
-                    </h3>
-                    <p className="text-[#4F4F4F] mb-4">{study.industry}</p>
-                    <p className="text-sm text-[#828282] mb-6">Platform: {study.platform}</p>
-                    
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-semibold text-[#1A1A1A] mb-2">Challenge</h4>
-                        <p className="text-[#4F4F4F] text-sm">{study.challenge}</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-[#1A1A1A] mb-2">Strategy</h4>
-                        <p className="text-[#4F4F4F] text-sm">{study.strategy}</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-[#1A1A1A] mb-2">Timeframe</h4>
-                        <p className="text-[#4F4F4F] text-sm">{study.timeframe}</p>
+
+                    {/* Professional Performance Chart */}
+                    <div className="lg:w-1/2">
+                      <div className="bg-muted/20 p-4 md:p-6 rounded-lg border border-border/30">
+                        <div className="flex items-center justify-between mb-4">
+                          <h5 className="font-semibold text-foreground text-base">📈 Performance Trend</h5>
+                          <div className="w-4 h-4 rounded-full" style={{ backgroundColor: study.color }}></div>
+                        </div>
+                        <SimpleChart
+                          data={study.chartData}
+                          type="line"
+                          height={200}
+                          color={study.color}
+                          variant="detailed"
+                          showGrid={true}
+                          animated={true}
+                          className="bg-card/80 rounded-lg p-3 border border-border/30"
+                        />
                       </div>
                     </div>
                   </div>
 
-                  {/* Results */}
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center justify-between mb-6">
-                      <h4 className="text-xl font-semibold text-[#1A1A1A]">Results</h4>
-                      <SimpleChart
-                        data={study.chartData}
-                        type="line"
-                        height={120}
-                        color={study.color}
-                        className="w-32"
-                      />
-                    </div>
+                  {/* Results Metrics */}
+                  <div>
+                    <h4 className="text-xl font-semibold text-foreground mb-6">Key Results</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                       {Object.entries(study.results).map(([key, result]) => (
-                        <div key={key} className="bg-white p-4 rounded-lg border border-[#E5E5E5]">
+                        <div key={key} className="bg-muted/20 p-4 rounded-lg border border-border/30">
                           <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm text-[#4F4F4F] uppercase tracking-wide">
+                            <span className="text-sm text-muted-foreground uppercase tracking-wide font-medium">
                               {key === 'cpa' ? 'Cost Per Acquisition' :
                                key === 'roas' ? 'Return on Ad Spend' :
                                key === 'cpl' ? 'Cost Per Lead' :
@@ -384,28 +490,28 @@ export default function ResultsPage() {
                             </span>
                           </div>
                           <div className="flex justify-between items-center mb-1">
-                            <span className="text-lg font-bold text-[#1A1A1A]">{result.before}</span>
-                            <svg className="w-4 h-4 text-[#828282]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <span className="text-lg font-bold text-foreground">{result.before}</span>
+                            <svg className="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
-                            <span className="text-lg font-bold text-[#27AE60]">{result.after}</span>
+                            <span className="text-lg font-bold text-success">{result.after}</span>
                           </div>
-                          <p className="text-sm text-[#27AE60] font-semibold">{result.improvement}</p>
+                          <p className="text-sm text-success font-semibold">{result.improvement}</p>
                         </div>
                       ))}
                     </div>
 
                     {/* Testimonial */}
-                    <div className="bg-[#F9FAFB] p-6 rounded-lg">
-                      <div className="flex items-start">
-                        <svg className="w-8 h-8 text-[#2D9CDB] mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 32 32">
+                    <div className="bg-muted/20 p-4 md:p-6 rounded-lg border border-border/30">
+                      <div className="flex items-start gap-3 md:gap-4">
+                        <svg className="w-6 h-6 md:w-8 md:h-8 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 32 32">
                           <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
                         </svg>
                         <div>
-                          <p className="text-[#4F4F4F] italic mb-4">"{study.testimonial.text}"</p>
+                          <p className="text-muted-foreground italic mb-4 leading-relaxed text-sm md:text-base">"{study.testimonial.text}"</p>
                           <div>
-                            <p className="font-semibold text-[#1A1A1A]">{study.testimonial.author}</p>
-                            <p className="text-sm text-[#828282]">{study.testimonial.title}</p>
+                            <p className="font-semibold text-foreground text-sm md:text-base">{study.testimonial.author}</p>
+                            <p className="text-xs md:text-sm text-muted-foreground">{study.testimonial.title}</p>
                           </div>
                         </div>
                       </div>
@@ -418,71 +524,19 @@ export default function ResultsPage() {
         </Container>
       </section>
 
-      {/* Breakthrough Cases Section */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              🧩 Individual Brand Success Stories
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Latest campaigns showcasing breakthrough results across diverse industries and business models.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {breakthroughCases.map((study, index) => (
-              <Card key={index} variant="service" className="p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-foreground mb-1">{study.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{study.subtitle}</p>
-                  
-                  <div className="p-3 bg-accent/50 rounded-lg mb-4">
-                    <h4 className="font-semibold text-foreground mb-2">📈 Results:</h4>
-                    <p className="text-primary font-medium text-sm">{study.results}</p>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2">🎯 Actions Taken:</h4>
-                    <ul className="space-y-1">
-                      {study.actions.map((action, actionIndex) => (
-                        <li key={actionIndex} className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5 text-xs">•</span>
-                          <span className="text-xs text-muted-foreground">{action}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="mt-4">
-                  <h5 className="font-medium text-foreground mb-2 text-sm">Performance Trend:</h5>
-                  <SimpleChart
-                    data={study.chartData}
-                    type="line"
-                    height={140}
-                    color={study.color}
-                  />
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* Industries Section */}
-      <section className="py-16 md:py-24 bg-secondary/50">
+      <section className="py-12 md:py-16 lg:py-24 bg-secondary/30">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Industries I've Proven Results In
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
               7+ years managing campaigns across e-commerce, BFSI, automotive, technology, and more. Each industry optimized for maximum performance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               { 
                 title: "E-commerce & Subscription", 
@@ -515,16 +569,16 @@ export default function ResultsPage() {
                 examples: ["Garage Door Services", "Home Services", "Local Contractors", "Service Professionals"]
               }
             ].map((industry, index) => (
-              <Card key={index} className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+              <Card key={index} className="p-4 md:p-6 bg-background border-border">
+                <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">
                   {industry.title}
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm md:text-base">
                   {industry.description}
                 </p>
                 <div>
-                  <p className="text-sm font-semibold text-muted-foreground mb-2">Examples:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
+                  <p className="text-xs md:text-sm font-semibold text-muted-foreground mb-2">Examples:</p>
+                  <ul className="text-xs md:text-sm text-muted-foreground space-y-1">
                     {industry.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>• {example}</li>
                     ))}
@@ -537,21 +591,21 @@ export default function ResultsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary-hover text-white">
+      <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-r from-primary to-primary-hover text-white">
         <Container>
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="text-center max-w-4xl mx-auto px-4 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
               ⚡ Tired of Agency Bloat?
             </h2>
-            <p className="text-xl mb-8 text-white/90 leading-relaxed">
+            <p className="text-lg md:text-xl mb-6 md:mb-8 text-white/90 leading-relaxed">
               Let's craft your brand's next success story. Get a free PPC growth blueprint and see how direct, 
               strategic execution can transform your campaigns.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button 
                 href="/work-with-me/" 
                 size="lg" 
-                className="bg-white text-primary hover:bg-white/90"
+                className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto"
               >
                 Get Your Free PPC Blueprint
               </Button>
@@ -559,7 +613,7 @@ export default function ResultsPage() {
                 href="/contact/" 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white/10"
+                className="border-white text-white hover:bg-white/10 w-full sm:w-auto"
               >
                 Schedule Strategy Call
               </Button>

@@ -27,11 +27,11 @@ export default function Home() {
         
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="text-center p-4 bg-accent rounded-lg">
+            <div className="text-center p-4 bg-muted/20 rounded-lg border border-border/30">
               <div className="text-2xl sm:text-3xl font-bold text-foreground">5x</div>
               <div className="text-sm text-muted-foreground">Sign-up Growth</div>
             </div>
-            <div className="text-center p-4 bg-accent rounded-lg">
+            <div className="text-center p-4 bg-muted/20 rounded-lg border border-border/30">
               <div className="text-2xl sm:text-3xl font-bold text-success">350%</div>
               <div className="text-sm text-muted-foreground">ROAS</div>
             </div>
@@ -67,11 +67,11 @@ export default function Home() {
         
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="text-center p-4 bg-accent rounded-lg">
+            <div className="text-center p-4 bg-muted/20 rounded-lg border border-border/30">
               <div className="text-2xl sm:text-3xl font-bold text-foreground">$300K+</div>
               <div className="text-sm text-muted-foreground">Monthly Budget</div>
             </div>
-            <div className="text-center p-4 bg-accent rounded-lg">
+            <div className="text-center p-4 bg-muted/20 rounded-lg border border-border/30">
               <div className="text-2xl sm:text-3xl font-bold text-success">$2M+</div>
               <div className="text-sm text-muted-foreground">Seasonal Revenue</div>
             </div>
@@ -107,11 +107,11 @@ export default function Home() {
         
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="text-center p-4 bg-accent rounded-lg">
+            <div className="text-center p-4 bg-muted/20 rounded-lg border border-border/30">
               <div className="text-2xl sm:text-3xl font-bold text-foreground">400+</div>
               <div className="text-sm text-muted-foreground">Accounts/Quarter</div>
             </div>
-            <div className="text-center p-4 bg-accent rounded-lg">
+            <div className="text-center p-4 bg-muted/20 rounded-lg border border-border/30">
               <div className="text-2xl sm:text-3xl font-bold text-success">100%</div>
               <div className="text-sm text-muted-foreground">CSAT Score</div>
             </div>
