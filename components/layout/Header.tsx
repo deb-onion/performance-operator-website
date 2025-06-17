@@ -7,13 +7,13 @@ import { Container } from './Container';
 import { Button } from '../ui/Button';
 import ThemeToggle from '../ui/ThemeToggle';
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about/' },
-  { name: 'Services', href: '/services/' },
-  { name: 'Results', href: '/results/' },
-  { name: 'Work With Me', href: '/work-with-me/' },
-  { name: 'Contact', href: '/contact/' },
+const navItems = [
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Results', href: '/results' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Work With Me', href: '/work-with-me' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
@@ -44,7 +44,7 @@ export default function Header() {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -118,7 +118,7 @@ export default function Header() {
         {isOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border/50 bg-secondary/50 backdrop-blur-sm rounded-lg">
             <div className="flex flex-col space-y-4 p-4">
-              {navigation.map((item) => (
+              {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
