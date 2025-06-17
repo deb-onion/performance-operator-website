@@ -4,53 +4,60 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://onlydeb.com';
+  const lastModified = new Date();
   
   return [
+    // Homepage - Highest priority for Google Ads Manager landing
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
+      lastModified: lastModified,
+      changeFrequency: 'daily',
+      priority: 1.0,
     },
+    // Key conversion pages - High priority for Google Ads Manager services
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      url: `${baseUrl}/work-with-me`,
+      lastModified: lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/results`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/work-with-me`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    // Google Ads Manager results and case studies - High SEO value
+    {
+      url: `${baseUrl}/results`,
+      lastModified: lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // About page - Important for Google Ads Manager expertise positioning
+    {
+      url: `${baseUrl}/about`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    // Contact page - Important for lead generation
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.75,
     },
+    // Legal pages - Lower priority but necessary
     {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,
     },

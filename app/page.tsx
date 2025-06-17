@@ -166,8 +166,8 @@ export default function Home() {
       <SocialProof />
       
       <Hero 
-        headline="7+ Years Managing Multi-Million Dollar Campaigns"
-        subheadline="I'm Debroop, a results-driven PPC Manager who delivered 400% ROAS and $2M+ revenue for brands. From Google to Bloomstories, I optimize campaigns that scale. No agency bloat—just direct expertise."
+        headline="Google Ads Manager & PPC Agency Expert with 7+ Years Managing Multi-Million Dollar Campaigns"
+        subheadline="I'm Deb, a results-driven Google Ads Manager who delivered 400% ROAS and $2M+ revenue for brands across USA & Europe. From Google to leading subscription platforms, I optimize PPC campaigns that scale. No agency bloat—just direct Google Ads expertise."
         cta="Let's Scale Together"
         ctaHref="/work-with-me/"
       />
@@ -192,10 +192,10 @@ export default function Home() {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Operators Outperform Agencies
+              Why Google Ads Manager Expertise Outperforms Traditional PPC Agencies
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Skip the layers of account managers and junior specialists. Work directly with a seasoned operator who gets it done right.
+              Skip the layers of account managers and junior specialists. Work directly with an experienced Google Ads Manager who delivers results across USA & Europe markets.
             </p>
           </div>
           
@@ -206,9 +206,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Fast Implementation</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Google Ads Manager Speed</h3>
               <p className="text-muted-foreground">
-                No long onboarding processes or approval chains. Strategies go from idea to execution in days, not weeks.
+                No long PPC agency onboarding processes or approval chains. Google Ads strategies go from idea to execution in days, not weeks.
               </p>
             </Card>
             
@@ -218,9 +218,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Direct Access</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Direct Google Ads Manager Access</h3>
               <p className="text-muted-foreground">
-                The person you talk to is the person who runs your campaigns. No gatekeepers, no miscommunication.
+                The Google Ads Manager you talk to is the one who runs your campaigns. No PPC agency gatekeepers, no miscommunication.
               </p>
             </Card>
             
@@ -230,9 +230,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Cost Efficiency</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">PPC Agency Cost Efficiency</h3>
               <p className="text-muted-foreground">
-                You only pay for expertise, not overhead. Get better results without the bloated agency pricing.
+                You only pay for Google Ads Manager expertise, not PPC agency overhead. Get better results without the bloated agency pricing.
               </p>
             </Card>
           </div>
@@ -243,10 +243,10 @@ export default function Home() {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Proven Results Across Industries
+              Google Ads Manager Results Across USA & Europe Markets
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From Google to Bloomstories to Dagamma, I've consistently delivered measurable improvements that drive real business growth.
+              From Google training to Bloomstories growth to Dagamma scaling, I've consistently delivered measurable PPC improvements across diverse markets and industries.
             </p>
           </div>
           
@@ -265,7 +265,7 @@ export default function Home() {
           
           <div className="text-center mt-12">
             <Button href="/results/" variant="gradient" size="lg">
-              View All Case Studies
+              View All Google Ads Manager Case Studies
             </Button>
           </div>
         </Container>
@@ -288,17 +288,17 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to scale like Bloomstories and Dagamma?
+              Ready for Google Ads Manager expertise like Bloomstories and Dagamma experienced?
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Let's discuss how I can bring the same results-driven approach to your campaigns. Direct access, proven results.
+              Let's discuss how I can bring the same Google Ads Manager results-driven approach to your PPC campaigns. Direct access, proven Google Ads Agency alternative.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/work-with-me/" variant="gradient" size="xl">
-                Let's Work Together
+                Work With Google Ads Manager
               </Button>
               <Button href="/results/" variant="outline" size="xl">
-                View Results
+                View PPC Results
               </Button>
             </div>
           </div>

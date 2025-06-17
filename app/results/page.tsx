@@ -6,9 +6,10 @@ import { SimpleChart } from "@/components/ui/SimpleChart";
 import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata(
-  "Results That Outperform Agencies | Solo PPC Specialist Success Stories",
-  "Solo PPC operator case studies: Shopify Ads, Google Ads, 400% ROAS, 9.78 ROAS jewelry eCom, subscription signup growth — OnlyDeb.com",
-  "/results"
+  "Google Ads Manager Results That Outperform PPC Agencies | USA & Europe Case Studies",
+  "Google Ads Manager case studies: 400% ROAS, 9.78 ROAS jewelry eCom, $2M+ revenue generation. PPC Agency alternative with proven results across USA & Europe markets.",
+  "/results",
+  ["Google Ads Manager case studies", "PPC Agency results", "Google Ads Manager success stories", "PPC management results USA", "Google Ads Agency alternative", "PPC specialist case studies Europe"]
 );
 
 // Enhanced metrics with animations
@@ -272,26 +273,26 @@ export default function ResultsPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-block bg-primary/10 text-primary px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 animate-pulse-soft">
-              🚀 Solo PPC Specialist Results
+              🚀 Google Ads Manager Results
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4 md:mb-6">
-              Results That Outperform{' '}
+              Google Ads Manager Results That Outperform{' '}
               <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
-                Agencies
+                PPC Agencies
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 leading-relaxed px-4 sm:px-0">
-              Data-driven campaigns. Full attention on each brand. Outcomes that speak louder than promises.
+              Proven Google Ads Manager expertise across USA & Europe markets. Data-driven PPC campaigns with full attention on each brand. Results that outperform traditional PPC agencies.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
               <Button href="/work-with-me/" size="lg" variant="gradient" className="w-full sm:w-auto">
-                Get Your Free PPC Blueprint
+                Get Your Google Ads Manager Blueprint
               </Button>
               <Button href="#individual-success" size="lg" variant="outline" className="w-full sm:w-auto">
-                View Success Stories
+                View Google Ads Manager Success Stories
               </Button>
             </div>
           </div>
@@ -301,6 +302,14 @@ export default function ResultsPage() {
       {/* Animated Metrics Section */}
       <section className="py-12 md:py-16 lg:py-24">
         <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Google Ads Manager Performance Metrics
+            </h2>
+            <p className="text-muted-foreground">
+              Measurable results from Google Ads Manager expertise across diverse markets
+            </p>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16">
             {metrics.map((metric, index) => (
               <MetricCard
@@ -313,7 +322,7 @@ export default function ResultsPage() {
                 prefix={metric.prefix}
                 suffix={metric.suffix}
                 isAnimated={true}
-                className="animate-fade-in-up text-center"
+                className="animate-fade-in-up text-center hover-lift"
                 style={{ animationDelay: `${index * 0.1}s` }}
               />
             ))}
@@ -326,10 +335,10 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-              🧩 Individual Brand Success Stories
+              🧩 Google Ads Manager Success Stories Across Industries
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-              Latest campaigns showcasing breakthrough results across diverse industries and business models.
+              Latest Google Ads Manager campaigns showcasing breakthrough PPC results across diverse industries and business models in USA & Europe markets.
             </p>
           </div>
 
@@ -405,10 +414,10 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Case Studies
+              Detailed Google Ads Manager Case Studies
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Deep dives into how strategic performance marketing drives real business growth.
+              Deep dives into how strategic Google Ads Manager expertise and PPC optimization drives real business growth across USA & Europe markets.
             </p>
           </div>
 
