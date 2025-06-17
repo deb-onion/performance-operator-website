@@ -2,7 +2,6 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { generatePageMetadata } from "@/lib/seo";
-import Link from "next/link";
 
 export const metadata = generatePageMetadata(
   "Google Ads & PPC Strategy Blog - Expert Insights from Performance Marketing Specialist",

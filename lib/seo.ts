@@ -1,6 +1,9 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
-export const defaultViewport = 'width=device-width, initial-scale=1';
+export const defaultViewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL('https://onlydeb.com'),
@@ -374,7 +377,7 @@ export function generateRegionalMetadata(
   const hreflangUrls = generateHreflangUrls(pathname);
   
   // Regional keyword variations
-  const regionalKeywords = {
+  const regionalKeywords: Record<string, string[]> = {
     'en-us': ['Google Ads Manager USA', 'PPC Agency United States', 'Performance Marketing Specialist America'],
     'en-gb': ['Google Ads Manager UK', 'PPC Agency London', 'Performance Marketing Specialist Britain'],
     'en-eu': ['Google Ads Manager Europe', 'PPC Agency EU', 'Performance Marketing Specialist Deutschland'],
@@ -405,7 +408,7 @@ export function generateRegionalMetadata(
 
 // Geographic coordinates for regional targeting
 function getRegionalCoordinates(region: string): string {
-  const coordinates = {
+  const coordinates: Record<string, string> = {
     'en-us': '40.7128,-74.0060', // New York
     'en-gb': '51.5074,-0.1278',  // London
     'en-eu': '52.5200,13.4050',  // Berlin
