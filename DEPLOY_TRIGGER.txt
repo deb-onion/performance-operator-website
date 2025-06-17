@@ -1,2 +1,0 @@
-Environment variables updated - triggering deployment
-Fixed forms: Lead magnet + Contact forms now work with Resend + reCAPTCHA integration
