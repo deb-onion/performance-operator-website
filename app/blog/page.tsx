@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { generatePageMetadata } from "@/lib/seo";
+import Link from "next/link";
 
 export const metadata = generatePageMetadata(
   "Google Ads & PPC Strategy Blog - Expert Insights from Performance Marketing Specialist",
@@ -12,13 +13,14 @@ export const metadata = generatePageMetadata(
 // Blog post data structure
 const featuredPosts = [
   {
-    slug: "google-ads-bidding-strategies-2025",
+    slug: "advanced-google-ads-bidding-strategies-2025",
     title: "Advanced Google Ads Bidding Strategies for 2025",
     excerpt: "Discover the latest automated bidding strategies and optimization techniques that drive higher ROI for Google Ads campaigns.",
     category: "Google Ads",
     readTime: "8 min read",
     date: "Dec 18, 2024",
-    featured: true
+    featured: true,
+    href: "/blog/advanced-google-ads-bidding-strategies-2025"
   },
   {
     slug: "performance-max-campaigns-optimization-guide",
@@ -27,7 +29,8 @@ const featuredPosts = [
     category: "Google Ads",
     readTime: "12 min read", 
     date: "Dec 17, 2024",
-    featured: true
+    featured: true,
+    href: "/blog/performance-max-campaigns-optimization-guide"
   },
   {
     slug: "ppc-budget-optimization-strategies",
@@ -36,7 +39,8 @@ const featuredPosts = [
     category: "PPC Strategy",
     readTime: "10 min read",
     date: "Dec 16, 2024",
-    featured: true
+    featured: true,
+    href: "#" // Placeholder for future blog post
   }
 ];
 
@@ -84,28 +88,32 @@ const recentPosts = [
     title: "How to Improve Google Ads Quality Score in 2025",
     category: "Google Ads",
     date: "Dec 15, 2024",
-    readTime: "6 min read"
+    readTime: "6 min read",
+    href: "#" // Coming soon
   },
   {
     slug: "ppc-attribution-modeling-guide", 
     title: "PPC Attribution Modeling: Complete Guide",
     category: "PPC Strategy",
     date: "Dec 14, 2024", 
-    readTime: "9 min read"
+    readTime: "9 min read",
+    href: "#" // Coming soon
   },
   {
     slug: "ecommerce-google-ads-case-study",
     title: "E-commerce Google Ads Case Study: 300% ROAS Increase",
     category: "Case Studies",
     date: "Dec 13, 2024",
-    readTime: "7 min read"
+    readTime: "7 min read",
+    href: "#" // Coming soon
   },
   {
     slug: "performance-marketing-kpis-metrics",
     title: "Essential Performance Marketing KPIs and Metrics",
     category: "Performance Marketing", 
     date: "Dec 12, 2024",
-    readTime: "8 min read"
+    readTime: "8 min read",
+    href: "#" // Coming soon
   }
 ];
 
@@ -201,7 +209,7 @@ export default function BlogPage() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">{post.date}</span>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" href={post.href}>
                       Read More →
                     </Button>
                   </div>
@@ -229,7 +237,7 @@ export default function BlogPage() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {recentPosts.map((post) => (
-              <Card key={post.slug} className="hover:shadow-md transition-all duration-200">
+              <Card key={post.slug} className="hover:shadow-md transition-all duration-200 cursor-pointer">
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-sm bg-accent px-2 py-1 rounded-full">
@@ -240,7 +248,16 @@ export default function BlogPage() {
                   <h3 className="text-lg font-semibold mb-2">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{post.date}</p>
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm text-muted-foreground">{post.date}</p>
+                    {post.href !== "#" ? (
+                      <Button variant="ghost" size="sm" href={post.href}>
+                        Read More →
+                      </Button>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">Coming Soon</span>
+                    )}
+                  </div>
                 </div>
               </Card>
             ))}
