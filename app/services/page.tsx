@@ -5,7 +5,7 @@ import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata(
   "PPC Management Services",
-  "Google Ads & Meta Ads management by Debroop Naha. 7+ years experience, 400% ROAS achieved, $5M+ ad spend managed. Results-driven PPC services.",
+  "Google Ads & Meta Ads management by Debroop Naha. 8+ years experience, 400% ROAS achieved, $5M+ ad spend managed. Results-driven PPC services.",
   "/services"
 );
 
@@ -101,7 +101,7 @@ export default function ServicesPage() {
               Proven PPC Management Services
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground">
-              7+ years managing campaigns for Google, Bloomstories, Dagamma, and more. From $100K to $300K+ monthly budgets. Google Ads, Meta Ads, Spotify, Apple Search Ads - I've scaled them all.
+              8+ years managing campaigns for Google, Bloomstories, Dagamma, and more. From $100K to $300K+ monthly budgets. Google Ads, Meta Ads, Spotify, Apple Search Ads - I've scaled them all.
             </p>
             <div className="mt-10">
               <Button href="/work-with-me/" size="lg">

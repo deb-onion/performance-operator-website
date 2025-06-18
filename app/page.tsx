@@ -153,7 +153,7 @@ export default function Home() {
       icon: "💰"
     },
     {
-      value: "7+",
+      value: "8+",
       label: "Years Experience",
       description: "From Google to leading brands",
       icon: "⭐"
@@ -166,7 +166,7 @@ export default function Home() {
       <SocialProof />
       
       <Hero 
-        headline="Google Ads Manager & PPC Agency Expert with 7+ Years Managing Multi-Million Dollar Campaigns"
+        headline="Google Ads Manager & PPC Agency Expert with 8+ Years Managing Multi-Million Dollar Campaigns"
         subheadline="I'm Deb, a results-driven Google Ads Manager who delivered 400% ROAS and $2M+ revenue for brands across USA & Europe. From Google to leading subscription platforms, I optimize PPC campaigns that scale. No agency bloat—just direct Google Ads expertise."
         cta="Let's Scale Together"
         ctaHref="/work-with-me/"

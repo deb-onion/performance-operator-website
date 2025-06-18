@@ -59,7 +59,7 @@ export default function Footer() {
                 </span>
               </Link>
               <p className="mt-4 text-base text-muted-foreground max-w-md leading-relaxed">
-                7+ years PPC Manager with proven results at Google, Bloomstories, Dagamma. 
+                8+ years PPC Manager with proven results at Google, Bloomstories, Dagamma. 
                 Performance marketing expertise that delivers 400% ROAS and scales brands.
               </p>
               <div className="mt-6 flex space-x-6">

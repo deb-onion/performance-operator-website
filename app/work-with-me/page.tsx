@@ -120,7 +120,7 @@ export default function WorkWithMePage() {
               Why Work With Me?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Skip the agency overhead and work directly with a specialist who's delivered results for 7+ years.
+              Skip the agency overhead and work directly with a specialist who's delivered results for 8+ years.
             </p>
           </div>
 
@@ -255,7 +255,7 @@ export default function WorkWithMePage() {
                 Industries I Specialize In
               </h2>
               <p className="mt-4 text-lg text-muted-foreground mb-8">
-                7+ years of experience across diverse industries, from Google to growth-stage startups.
+                8+ years of experience across diverse industries, from Google to growth-stage startups.
               </p>
               
               <div className="grid grid-cols-2 gap-4">

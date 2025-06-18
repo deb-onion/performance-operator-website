@@ -8,7 +8,7 @@ const faqs = [
   {
     id: 1,
     question: "What makes you different from traditional PPC agencies?",
-    answer: "Unlike agencies with multiple layers and junior staff, you work directly with me - a senior PPC specialist with 7+ years of experience. This means faster implementation, better communication, and no diluted expertise. You get the same person who strategizes your campaigns and optimizes them daily."
+    answer: "Unlike agencies with multiple layers and junior staff, you work directly with me - a senior PPC specialist with 8+ years of experience. This means faster implementation, better communication, and no diluted expertise. You get the same person who strategizes your campaigns and optimizes them daily."
   },
   {
     id: 2,

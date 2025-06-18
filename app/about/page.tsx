@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const metadata = generatePageMetadata(
   "About Debroop Naha",
-  "Meet Debroop Naha - 7+ years PPC Manager who delivered 400% ROAS at Google, Bloomstories, Dagamma. Performance marketing without agency bloat.",
+  "Meet Debroop Naha - 8+ years PPC Manager who delivered 400% ROAS at Google, Bloomstories, Dagamma. Performance marketing without agency bloat.",
   "/about"
 );
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
               Hi, I'm Debroop Naha
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground">
-              A results-driven PPC Manager with 7+ years managing multi-million dollar campaigns across e-commerce, BFSI, automotive, and technology. From Google to Bloomstories, I deliver scalable, data-driven solutions.
+              A results-driven PPC Manager with 8+ years managing multi-million dollar campaigns across e-commerce, BFSI, automotive, and technology. From Google to Bloomstories, I deliver scalable, data-driven solutions.
             </p>
           </div>
         </Container>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 text-center bg-card border-border/50">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto border border-primary/20">
-                <span className="text-2xl font-bold text-primary">7+</span>
+                <span className="text-2xl font-bold text-primary">8+</span>
               </div>
               <h3 className="mt-6 text-xl font-semibold text-foreground">Years of Experience</h3>
               <p className="mt-4 text-muted-foreground">

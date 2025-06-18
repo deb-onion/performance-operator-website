@@ -8,7 +8,7 @@ export const defaultViewport: Viewport = {
 export const defaultMetadata: Metadata = {
   metadataBase: new URL('https://onlydeb.com'),
   title: 'OnlyDeb | Google Ads Manager & PPC Agency Expert | USA & Europe Specialist',
-  description: 'Professional Google Ads Manager & PPC Agency specialist with 7+ years experience. Achieved 400% ROAS for brands in USA & Europe. Expert Google Ads management, Meta Ads optimization.',
+  description: 'Professional Google Ads Manager & PPC Agency specialist with 8+ years experience. Achieved 400% ROAS for brands in USA & Europe. Expert Google Ads management, Meta Ads optimization.',
   keywords: [
     // Primary target keywords
     'Google Ads Manager',
@@ -57,7 +57,7 @@ export const defaultMetadata: Metadata = {
     url: 'https://onlydeb.com',
     siteName: 'OnlyDeb - Google Ads Manager & PPC Agency Expert',
     title: 'OnlyDeb | Google Ads Manager & PPC Agency Expert | USA & Europe',
-    description: 'Professional Google Ads Manager & PPC Agency specialist with 7+ years experience. 400% ROAS achieved for brands across USA & Europe. Direct expertise, no agency bloat.',
+    description: 'Professional Google Ads Manager & PPC Agency specialist with 8+ years experience. 400% ROAS achieved for brands across USA & Europe. Direct expertise, no agency bloat.',
     images: [
       {
         url: '/og-image.jpg',
@@ -128,7 +128,7 @@ export const structuredData: { '@context': string; '@graph': Array<Record<string
       name: 'Debroop Naha',
       url: 'https://onlydeb.com',
       image: 'https://onlydeb.com/profile.jpg',
-      description: 'Professional Google Ads Manager & PPC Agency specialist with 7+ years expertise managing multi-million dollar campaigns across USA & Europe, delivering results like 400% ROAS and $2M+ revenue generation.',
+      description: 'Professional Google Ads Manager & PPC Agency specialist with 8+ years expertise managing multi-million dollar campaigns across USA & Europe, delivering results like 400% ROAS and $2M+ revenue generation.',
       jobTitle: 'Google Ads Manager & PPC Agency Specialist',
       worksFor: {
         '@type': 'Organization',
@@ -261,7 +261,7 @@ export const structuredData: { '@context': string; '@graph': Array<Record<string
       '@id': 'https://onlydeb.com/#website',
       url: 'https://onlydeb.com',
       name: 'OnlyDeb - Google Ads Manager & PPC Agency Expert',
-      description: 'Professional Google Ads Manager & PPC Agency specialist with 7+ years experience serving brands across USA & Europe.',
+      description: 'Professional Google Ads Manager & PPC Agency specialist with 8+ years experience serving brands across USA & Europe.',
       publisher: {
         '@type': 'Organization',
         '@id': 'https://onlydeb.com/#organization'

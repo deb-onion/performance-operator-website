@@ -52,7 +52,7 @@ const metrics = [
     suffix: 'M+'
   },
   { 
-    number: 7, 
+    number: 8, 
     label: "Years Experience", 
     description: "From Google to leading brands",
     icon: (
@@ -182,6 +182,33 @@ const breakthroughCases = [
 // Original case studies from your existing page - Enhanced for SEO
 const caseStudies = [
   {
+    title: "Black Voyage",
+    industry: "Shopify Luggage eCommerce",
+    platform: "Google Ads & Merchant Center",
+    challenge: "Take over from prior agency and scale ROAS + purchases while establishing clean campaign structure for Shopify luggage brand",
+    strategy: "Rebuilt PMax + Shopping + branded exclusions, Merchant feed + tracking overhaul, Funnel-based search + display campaigns",
+    timeframe: "May 2025 - Present",
+    results: {
+      roas: { before: "1.69", after: "4.26", improvement: "152% ROAS increase" },
+      purchases: { before: "13", after: "69", improvement: "431% purchase growth" },
+      revenue: { before: "$3.2K", after: "$20.6K", improvement: "544% revenue increase" },
+      monthly: { before: "April", after: "May", improvement: "First month transformation" }
+    },
+    testimonial: {
+      text: "The transformation was immediate and dramatic. Within weeks of taking over our campaigns, we saw our ROAS more than double and our purchase volume explode. The clean campaign structure and proper tracking setup made all the difference in our Shopify store performance.",
+      author: "Black Voyage Team",
+      title: "Shopify Luggage Brand"
+    },
+    chartData: [
+      { label: 'Week 1', value: 1.69 },
+      { label: 'Week 2', value: 2.34 },
+      { label: 'Week 3', value: 3.12 },
+      { label: 'Week 4', value: 4.26 }
+    ],
+    color: '#3b82f6',
+    seoKeywords: "Shopify PPC optimization, luggage ecommerce Google Ads, merchant center setup"
+  },
+  {
     title: "Bloomstories",
     industry: "Subscription Platform",
     platform: "Google Ads, Facebook, Spotify, Apple Search Ads",
@@ -234,6 +261,117 @@ const caseStudies = [
     ],
     color: '#f59e0b',
     seoKeywords: "Dagamma ecommerce case study, Baby Doppler PPC, global campaign scaling"
+  },
+  {
+    title: "Mandarin Duck",
+    industry: "Archery Gear eCommerce",
+    platform: "Google Ads",
+    challenge: "Target niche audiences for archery equipment while maintaining 400%+ ROAS consistently in a specialized market with high CPC competition",
+    strategy: "Advanced Merchant Center feed optimization for product clarity, bid adjustments based on audience intent + seasonality, continuous audience refinement to reduce wasted spend",
+    timeframe: "Dec 2019 - Jan 2022",
+    results: {
+      roas: { before: "200%", after: "400%+", improvement: "100%+ ROAS improvement" },
+      cpa: { before: "$15", after: "<$8", improvement: "47% CPA reduction" },
+      consistency: { before: "Variable", after: "Stable", improvement: "Consistent quarterly performance" },
+      specialization: { before: "General", after: "Niche-focused", improvement: "Specialized market domination" }
+    },
+    testimonial: {
+      text: "Working in the archery niche requires deep understanding of our specialized audience. The campaign optimization and feed management delivered consistent 400% ROAS across multiple quarters, which is exceptional in our competitive vertical.",
+      author: "Mandarin Duck",
+      title: "Archery Equipment Retailer"
+    },
+    chartData: [
+      { label: 'Q1 2020', value: 200 },
+      { label: 'Q2 2020', value: 320 },
+      { label: 'Q3 2020', value: 400 },
+      { label: 'Q4 2020', value: 410 },
+      { label: 'Q1 2021', value: 400 },
+      { label: 'Q2 2021', value: 420 }
+    ],
+    color: '#ef4444',
+    seoKeywords: "archery gear PPC, sports equipment Google Ads, niche ecommerce advertising"
+  },
+  {
+    title: "Garage Doors LA",
+    industry: "Local Lead Generation",
+    platform: "Google Ads",
+    challenge: "Drive high-quality local leads in a competitive service market while keeping lead costs profitable for garage door services",
+    strategy: "Built dedicated lead-gen PPC funnels, geo-targeted bidding + ad extensions for location trust, media planning to align with peak demand times",
+    timeframe: "Mar 2019 - Feb 2021",
+    results: {
+      leads: { before: "100+/day", after: "500+/day", improvement: "400% daily lead increase" },
+      cpa: { before: "$25", after: "$10", improvement: "60% cost reduction" },
+      quality: { before: "Mixed", after: "High-intent", improvement: "Improved lead quality" },
+      market: { before: "Regional", after: "Dominant", improvement: "Local market domination" }
+    },
+    testimonial: {
+      text: "The lead generation campaigns transformed our business. Going from 100 to 500+ daily leads while cutting costs in half gave us the scale we needed to dominate the LA garage door market. The geo-targeting and timing optimization were game-changers.",
+      author: "Garage Doors LA",
+      title: "Local Service Provider"
+    },
+    chartData: [
+      { label: 'Week 1', value: 125 },
+      { label: 'Week 4', value: 200 },
+      { label: 'Week 8', value: 350 },
+      { label: 'Week 12', value: 450 },
+      { label: 'Week 16', value: 500 }
+    ],
+    color: '#06b6d4',
+    seoKeywords: "local lead generation, garage door PPC, service business Google Ads"
+  },
+  {
+    title: "Dubai Visa",
+    industry: "Hybrid eCommerce + Lead Generation",
+    platform: "Google Ads",
+    challenge: "Manage both lead gen and eCommerce conversions with 400% ROAS target in tourism sector during travel restrictions",
+    strategy: "Dual campaign model (eCom + lead gen split), media plans optimized for seasonal spikes, continuous ROI tracking + budget allocation",
+    timeframe: "Sep 2018 - Jul 2019",
+    results: {
+      roas: { before: "200%", after: "400%", improvement: "100% ROAS improvement" },
+      leads: { before: "100/week", after: "300+/week", improvement: "200% weekly lead growth" },
+      model: { before: "Single-focus", after: "Hybrid", improvement: "Dual conversion optimization" },
+      seasonal: { before: "Reactive", after: "Predictive", improvement: "Seasonal spike optimization" }
+    },
+    testimonial: {
+      text: "Managing both our visa services and travel packages required a sophisticated dual approach. The hybrid campaign model delivered consistent 400% ROAS while tripling our weekly leads, even during challenging travel conditions.",
+      author: "Dubai Visa Services",
+      title: "Travel & Tourism Provider"
+    },
+    chartData: [
+      { label: 'Launch', value: 200 },
+      { label: 'Month 2', value: 290 },
+      { label: 'Month 4', value: 370 },
+      { label: 'Month 6', value: 400 }
+    ],
+    color: '#ec4899',
+    seoKeywords: "travel industry PPC, visa services advertising, tourism Google Ads"
+  },
+  {
+    title: "Growthpep",
+    industry: "Jewelry eCommerce",
+    platform: "Google Ads + Native",
+    challenge: "Deliver high ROAS during national lockdown for jewelry eCommerce when consumer behavior shifted dramatically",
+    strategy: "Hybrid search + native advertising strategy, data-first bid + creative refinement, seasonality-aligned scaling during lockdown",
+    timeframe: "Mar 2020 - Aug 2020",
+    results: {
+      roas: { before: "3x", after: "9.78", improvement: "226% ROAS increase" },
+      cpa: { before: "$30", after: "$12", improvement: "60% cost reduction" },
+      timing: { before: "Pre-lockdown", after: "Peak lockdown", improvement: "Lockdown optimization" },
+      platform: { before: "Google only", after: "Hybrid", improvement: "Multi-platform success" }
+    },
+    testimonial: {
+      text: "During the most challenging period for retail, the hybrid Google + Native strategy delivered our best performance ever. Achieving 9.78 ROAS during lockdown when most competitors struggled was remarkable and kept our jewelry business thriving.",
+      author: "Growthpep Team",
+      title: "Jewelry eCommerce Brand"
+    },
+    chartData: [
+      { label: 'Pre-lockdown', value: 300 },
+      { label: 'Early lockdown', value: 580 },
+      { label: 'Peak lockdown', value: 978 },
+      { label: 'Post-lockdown', value: 640 }
+    ],
+    color: '#8b5cf6',
+    seoKeywords: "jewelry ecommerce PPC, lockdown advertising strategy, native ads integration"
   },
   {
     title: "Freelance Portfolio",
@@ -304,10 +442,10 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Google Ads Manager Performance Metrics
+              Google Ads Manager Performance Metrics vs PPC Agencies
             </h2>
             <p className="text-muted-foreground">
-              Measurable results from Google Ads Manager expertise across diverse markets
+              Measurable results from dedicated Google Ads Manager expertise across USA & Europe markets, outperforming traditional PPC agencies
             </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16">
@@ -538,10 +676,10 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Industries I've Proven Results In
+              Google Ads Manager Results Across Industries (USA & Europe)
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-              7+ years managing campaigns across e-commerce, BFSI, automotive, technology, and more. Each industry optimized for maximum performance.
+              8+ years as a Google Ads Manager delivering superior results vs PPC agencies across e-commerce, BFSI, automotive, and technology. Direct Google Ads Agency alternative serving USA & Europe markets with industry-specific optimization.
             </p>
           </div>
 
@@ -549,32 +687,32 @@ export default function ResultsPage() {
             {[
               { 
                 title: "E-commerce & Subscription", 
-                description: "From Bloomstories to Dagamma - scaled subscription and e-commerce models",
+                description: "Google Ads Manager expertise from Bloomstories to Dagamma - scaled subscription and e-commerce models beyond typical PPC agency results",
                 examples: ["Subscription Platforms", "E-commerce Solutions", "Product Marketplaces", "Direct-to-Consumer Brands"]
               },
               { 
                 title: "Technology & Apps", 
-                description: "App acquisition campaigns and tech platform scaling",
+                description: "Google Ads Manager for app acquisition campaigns and tech platform scaling - outperforming traditional PPC agencies",
                 examples: ["Educational Apps", "Mobile Applications", "SaaS Platforms", "Tech Startups"]
               },
               { 
                 title: "BFSI (Banking & Finance)", 
-                description: "Financial services and insurance campaign management",
+                description: "Specialized Google Ads Manager services for financial services and insurance - PPC agency alternative for complex compliance",
                 examples: ["Financial Services", "Insurance Products", "Investment Platforms", "Fintech Solutions"]
               },
               { 
                 title: "Automotive", 
-                description: "Automotive industry campaign optimization and lead generation",
+                description: "Google Ads Manager for automotive industry campaign optimization and lead generation across USA & Europe markets",
                 examples: ["Car Dealerships", "Auto Services", "Vehicle Parts", "Automotive Technology"]
               },
               { 
                 title: "Travel & Tourism", 
-                description: "Tourism and travel industry campaign management",
+                description: "Google Ads Manager expertise in tourism and travel industry - superior to generic PPC agency approaches",
                 examples: ["Dubai Visa Services", "Travel Agencies", "Tourism Operators", "Hospitality Services"]
               },
               { 
                 title: "Local Services", 
-                description: "High-converting local service provider campaigns",
+                description: "High-converting Google Ads Manager campaigns for local service providers - PPC agency alternative with direct attention",
                 examples: ["Garage Door Services", "Home Services", "Local Contractors", "Service Professionals"]
               }
             ].map((industry, index) => (
@@ -604,11 +742,10 @@ export default function ResultsPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto px-4 sm:px-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
-              ⚡ Tired of Agency Bloat?
+              ⚡ Ready to Skip the PPC Agency Overhead?
             </h2>
             <p className="text-lg md:text-xl mb-6 md:mb-8 text-white/90 leading-relaxed">
-              Let's craft your brand's next success story. Get a free PPC growth blueprint and see how direct, 
-              strategic execution can transform your campaigns.
+              Get direct Google Ads Manager expertise without PPC agency bloat. Free Google Ads Agency consultation to show you how dedicated Google Ads management transforms campaigns across USA & Europe markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button 
@@ -616,7 +753,7 @@ export default function ResultsPage() {
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto"
               >
-                Get Your Free PPC Blueprint
+                Get Your Free Google Ads Manager Blueprint
               </Button>
               <Button 
                 href="/contact/" 
@@ -624,7 +761,7 @@ export default function ResultsPage() {
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 w-full sm:w-auto"
               >
-                Schedule Strategy Call
+                Schedule Google Ads Strategy Call
               </Button>
             </div>
           </div>

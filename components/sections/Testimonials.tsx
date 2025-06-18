@@ -162,7 +162,7 @@ export default function Testimonials() {
             <div className="text-sm text-muted-foreground">Client Retention</div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="text-2xl font-bold text-primary mb-1">7+</div>
+                            <div className="text-2xl font-bold text-primary mb-1">8+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
         </div>
