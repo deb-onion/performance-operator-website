@@ -16,6 +16,16 @@ This directory contains images for blog posts. Please place your blog images her
    - Alt text: "Diagram showing effective audience targeting methods for Performance Max campaigns, including Customer Lists, Custom Segments, and Website Visitors linked to a central user silhouette."
    - Used in: /blog/performance-max-campaigns-optimization-guide
 
+## Advanced Google Ads Bidding Strategies Images
+
+4. **advanced-google-ads-bidding-strategies-hero.png**
+   - Alt text: "Hero graphic for advanced Google Ads bidding strategies in 2025, featuring a browser window, rising arrow, dollar signs, Google icon, and price tag against an abstract background."
+   - Used in: /blog/advanced-google-ads-bidding-strategies-2025
+
+5. **bidding-strategy-funnel-2025.png**
+   - Alt text: "Funnel illustration showing recommended Google Ads bidding strategies for TOFU, MOFU, and BOFU stages in 2025."
+   - Used in: /blog/advanced-google-ads-bidding-strategies-2025
+
 ## Instructions
 
 1. Upload the image files you created to this directory (`public/blog/images/`)
