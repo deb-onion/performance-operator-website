@@ -6,72 +6,86 @@ import { Carousel } from '@/components/ui/Carousel';
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "Marketing Director",
-    company: "TechFlow Solutions",
-    content: "Debroop transformed our Google Ads performance completely. We went from barely breaking even to achieving 380% ROAS in just 3 months. His strategic approach and attention to detail is unmatched.",
+    name: "Black Voyage Team",
+    role: "Shopify",
+    company: "Luggage Brand",
+    content: "The transformation was immediate and dramatic. Within weeks of taking over our campaigns, we saw our ROAS more than double and our purchase volume explode. The clean campaign structure and proper tracking setup made all the difference in our Shopify store performance.",
     rating: 5,
-    image: "👩‍💼",
+    image: "🧳",
     metrics: {
-      before: "120% ROAS",
-      after: "380% ROAS",
-      improvement: "+217%"
+      before: "1.69 ROAS",
+      after: "4.26 ROAS",
+      improvement: "+152%"
     }
   },
   {
     id: 2,
-    name: "Marcus Rodriguez",
-    role: "Founder & CEO",
-    company: "EcoLiving Brands",
-    content: "Working with Debroop was a game-changer for our subscription business. He didn't just manage our campaigns - he became a strategic partner who understood our business goals.",
+    name: "Michael Albertshauser",
+    role: "COO",
+    company: "Bloom Stories",
+    content: "Debroop excelled at refining keyword strategies, optimizing ad copy for higher engagement, and leveraging advanced analytics to uncover valuable opportunities. Their analytical prowess enabled them to convert complex data into actionable insights effectively.",
     rating: 5,
-    image: "👨‍💼",
+    image: "🎧",
     metrics: {
-      before: "$45 CPA",
-      after: "$18 CPA",
-      improvement: "-60%"
+      before: "150% ROAS",
+      after: "350% ROAS",
+      improvement: "+133%"
     }
   },
   {
     id: 3,
-    name: "Lisa Thompson",
-    role: "Growth Marketing Lead",
-    company: "FitnessTech Inc",
-    content: "The level of transparency and communication was outstanding. Debroop provided weekly insights that helped us make better business decisions beyond just advertising.",
+    name: "Mitho Kuna",
+    role: "President & CEO",
+    company: "Baby Doppler (Dagamma)",
+    content: "I am pleased to write this letter of recommendation for Debroop Naha, who served as PPC Manager at Baby Doppler for 1 year and 10 months. During his time with us, Deb consistently demonstrated a high level of expertise in pay-per-click advertising and delivered exceptional results.",
     rating: 5,
-    image: "👩‍🏫",
+    image: "👶",
     metrics: {
-      before: "2.1x Revenue",
-      after: "4.8x Revenue",
-      improvement: "+129%"
+      before: "$12+ CPA",
+      after: "$8 CPA",
+      improvement: "-33%"
     }
   },
   {
     id: 4,
-    name: "David Kim",
-    role: "VP of Marketing",
-    company: "SaaS Startup",
-    content: "Debroop's expertise in Meta Ads helped us scale our B2B SaaS from $50K to $200K MRR. His data-driven approach and quick optimizations were crucial to our growth.",
+    name: "Mandarin Duck",
+    role: "Archery Equipment",
+    company: "Retailer",
+    content: "Working in the archery niche requires deep understanding of our specialized audience. The campaign optimization and feed management delivered consistent 400% ROAS across multiple quarters, which is exceptional in our competitive vertical.",
     rating: 5,
-    image: "👨‍💻",
+    image: "🎯",
     metrics: {
-      before: "$50K MRR",
-      after: "$200K MRR",
-      improvement: "+300%"
+      before: "200% ROAS",
+      after: "400% ROAS",
+      improvement: "+100%"
     }
   },
   {
     id: 5,
-    name: "Anna Petrov",
-    role: "E-commerce Manager",
-    company: "Fashion Forward",
-    content: "During our peak season, Debroop managed campaigns that generated over $1.2M in revenue. His understanding of seasonal trends and consumer behavior is exceptional.",
+    name: "Garage Doors LA",
+    role: "Local Service",
+    company: "Provider",
+    content: "The lead generation campaigns transformed our business. Going from 100 to 500+ daily leads while cutting costs in half gave us the scale we needed to dominate the LA garage door market. The geo-targeting and timing optimization were game-changers.",
     rating: 5,
-    image: "👩‍🎨",
+    image: "🚪",
     metrics: {
-      before: "$300K Revenue",
-      after: "$1.2M Revenue",
-      improvement: "+300%"
+      before: "100/day leads",
+      after: "500+/day leads",
+      improvement: "+400%"
+    }
+  },
+  {
+    id: 6,
+    name: "Growthpep Team",
+    role: "Jewelry eCommerce",
+    company: "Brand",
+    content: "During the most challenging period for retail, the hybrid Google + Native strategy delivered our best performance ever. Achieving 9.78 ROAS during lockdown when most competitors struggled was remarkable and kept our jewelry business thriving.",
+    rating: 5,
+    image: "💎",
+    metrics: {
+      before: "3x ROAS",
+      after: "9.78 ROAS",
+      improvement: "+226%"
     }
   }
 ];
@@ -150,19 +164,19 @@ export default function Testimonials() {
         {/* Trust indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="animate-fade-in-up">
-            <div className="text-2xl font-bold text-primary mb-1">50+</div>
-            <div className="text-sm text-muted-foreground">Happy Clients</div>
+            <div className="text-2xl font-bold text-primary mb-1">400%</div>
+            <div className="text-sm text-muted-foreground">Peak ROAS Achieved</div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <div className="text-2xl font-bold text-primary mb-1">$5M+</div>
             <div className="text-sm text-muted-foreground">Ad Spend Managed</div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="text-2xl font-bold text-primary mb-1">98%</div>
-            <div className="text-sm text-muted-foreground">Client Retention</div>
+            <div className="text-2xl font-bold text-primary mb-1">$2M+</div>
+            <div className="text-sm text-muted-foreground">Revenue Generated</div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            <div className="text-2xl font-bold text-primary mb-1">8+</div>
+            <div className="text-2xl font-bold text-primary mb-1">8+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
         </div>

@@ -6,45 +6,45 @@ import { Card } from './Card';
 const socialProofMessages = [
   {
     id: 1,
-    message: "Sarah from TechFlow Solutions just achieved 380% ROAS with Google Ads optimization",
-    time: "2 minutes ago",
+    message: "Black Voyage scaling ROAS from 1.69 to 4.26 with ongoing Google Ads optimization",
+    time: "Currently managing",
     type: "success",
-    icon: "🎯"
+    icon: "🧳"
   },
   {
     id: 2,
-    message: "Marcus scaled his subscription business to $200K MRR with strategic Meta Ads",
-    time: "5 minutes ago",
+    message: "Bloomstories achieved 5x sign-up growth with $100K+ budget scaling on multi-platform campaigns",
+    time: "2023-2024 project",
     type: "achievement",
-    icon: "🚀"
+    icon: "🎧"
   },
   {
     id: 3,
-    message: "Lisa from FitnessTech achieved 4.8x revenue growth in 3 months",
-    time: "8 minutes ago",
+    message: "Dagamma generated $2M+ seasonal revenue with global campaign optimization",
+    time: "2022-2023 project",
     type: "growth",
-    icon: "📈"
+    icon: "👶"
   },
   {
     id: 4,
-    message: "David reduced CPA by 60% while scaling to $300K monthly ad spend",
-    time: "12 minutes ago",
+    message: "Mandarin Duck achieved consistent 400% ROAS across multiple quarters in archery niche",
+    time: "2019-2022 project",
     type: "optimization",
-    icon: "⚡"
+    icon: "🎯"
   },
   {
     id: 5,
-    message: "Anna generated $1.2M in seasonal revenue with peak optimization strategies",
-    time: "15 minutes ago",
+    message: "Garage Doors LA scaled from 100 to 500+ daily leads while cutting CPA by 60%",
+    time: "2019-2021 project",
     type: "revenue",
-    icon: "💰"
+    icon: "🚪"
   },
   {
     id: 6,
-    message: "Michael improved campaign performance by 250% with advanced targeting",
-    time: "18 minutes ago",
+    message: "Growthpep achieved 9.78 ROAS during lockdown with hybrid Google + Native strategy",
+    time: "2020 lockdown project",
     type: "improvement",
-    icon: "🎪"
+    icon: "💎"
   }
 ];
 
