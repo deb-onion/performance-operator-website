@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { generatePageMetadata } from "@/lib/seo";
-import { allBlogPosts, getFeaturedPosts, blogCategories, getRecentPosts } from "@/lib/blog-data";
+import { allBlogPosts, getFeaturedPosts, blogCategories } from "@/lib/blog-data";
 import Link from "next/link";
 
 export const metadata = generatePageMetadata(
@@ -12,7 +12,6 @@ export const metadata = generatePageMetadata(
 );
   export default function BlogPage() {
   const featuredPosts = getFeaturedPosts();
-  const recentPosts = getRecentPosts(4);
 
   return (
     <>

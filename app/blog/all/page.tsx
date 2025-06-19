@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { generatePageMetadata } from "@/lib/seo";
-import { allBlogPosts, blogCategories } from "@/lib/blog-data";
+import { allBlogPosts } from "@/lib/blog-data";
 import Link from "next/link";
 
 export const metadata = generatePageMetadata(
@@ -76,7 +76,7 @@ export default function AllBlogPostsPage() {
       <section className="py-16">
         <Container>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allBlogPosts.map((post, index) => (
+            {allBlogPosts.map((post) => (
               <Card key={post.slug} className="h-full hover:shadow-lg transition-all duration-200 hover:-translate-y-1 overflow-hidden">
                 {post.image && (
                   <div className="aspect-video w-full overflow-hidden">

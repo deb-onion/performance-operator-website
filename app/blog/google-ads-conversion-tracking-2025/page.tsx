@@ -221,7 +221,7 @@ export default function GoogleAdsConversionTracking2025() {
               <h2>✅ Advanced Best Practices</h2>
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
                 <ul className="space-y-3 mb-0">
-                  <li><strong>Native Google Ads tag + Enhanced Conversions > GA4-only imports</strong> → cleaner AI inputs.</li>
+                  <li><strong>Native Google Ads tag + Enhanced Conversions &gt; GA4-only imports</strong> → cleaner AI inputs.</li>
                   <li><strong>Use GTM for flexible deployment + easier debugging.</strong></li>
                   <li><strong>Test tags before launch with Tag Assistant / GTM Preview.</strong></li>
                   <li><strong>Feed offline conversions FAST to keep AI learning right.</strong></li>
