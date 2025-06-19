@@ -416,17 +416,19 @@ export default function BiddingStrategiesGuide() {
               <Card className="p-6 hover:shadow-lg transition-all duration-200">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-sm bg-success px-2 py-1 rounded-full text-success-foreground">
-                    PPC Strategy
+                    Google Ads
                   </span>
                   <span className="text-sm text-muted-foreground">10 min read</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">
-                  PPC Budget Optimization: Maximize ROI Across Platforms
+                  <Link href="/blog/automated-vs-manual-bidding-2025">
+                    Automated vs Manual Bidding in 2025: The Ultimate Guide
+                  </Link>
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Learn data-driven budget allocation strategies across Google Ads, Microsoft Ads, and Meta to maximize your advertising ROI.
+                  Discover when to use automated vs manual bidding in Google Ads for 2025. A small business guide to blending AI and human control.
                 </p>
-                <Button variant="ghost" size="sm">
+                <Button variant="ghost" size="sm" href="/blog/automated-vs-manual-bidding-2025">
                   Read More →
                 </Button>
               </Card>

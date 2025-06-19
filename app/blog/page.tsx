@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { generatePageMetadata } from "@/lib/seo";
+import { allBlogPosts, getFeaturedPosts, blogCategories, getRecentPosts } from "@/lib/blog-data";
 import Link from "next/link";
 
 export const metadata = generatePageMetadata(
@@ -9,115 +10,10 @@ export const metadata = generatePageMetadata(
   "Stay ahead with the latest Google Ads strategies, PPC optimization techniques, and performance marketing insights. In-depth guides, case studies, and actionable tips from a certified Google Ads Manager.",
   "/blog"
 );
+  export default function BlogPage() {
+  const featuredPosts = getFeaturedPosts();
+  const recentPosts = getRecentPosts(4);
 
-// Blog post data structure
-const featuredPosts = [
-  {
-    slug: "advanced-google-ads-bidding-strategies-2025",
-    title: "Advanced Google Ads Bidding Strategies for 2025",
-    excerpt: "Discover the latest automated bidding strategies and optimization techniques that drive higher ROI for Google Ads campaigns.",
-    category: "Google Ads",
-    readTime: "8 min read",
-    date: "Dec 18, 2024",
-    featured: true,
-    href: "/blog/advanced-google-ads-bidding-strategies-2025"
-  },
-  {
-    slug: "performance-max-campaigns-optimization-guide",
-    title: "Performance Max Campaigns: Complete Optimization Guide",
-    excerpt: "Master Performance Max campaigns with advanced optimization strategies, asset testing, and budget allocation techniques.",
-    category: "Google Ads",
-    readTime: "12 min read", 
-    date: "Dec 17, 2024",
-    featured: true,
-    href: "/blog/performance-max-campaigns-optimization-guide"
-  },
-  {
-    slug: "ppc-budget-optimization-strategies",
-    title: "PPC Budget Optimization: Maximize ROI Across Platforms",
-    excerpt: "Learn data-driven budget allocation strategies across Google Ads, Microsoft Ads, and Meta to maximize your advertising ROI.",
-    category: "PPC Strategy",
-    readTime: "10 min read",
-    date: "Dec 16, 2024",
-    featured: true,
-    href: "#" // Placeholder for future blog post
-  }
-];
-
-const categories = [
-  {
-    name: "Google Ads",
-    slug: "google-ads",
-    description: "Google Ads strategies, campaign optimization, and advanced techniques",
-    postCount: 5,
-    color: "text-primary"
-  },
-  {
-    name: "PPC Strategy", 
-    slug: "ppc-strategy",
-    description: "Cross-platform PPC strategies and campaign management",
-    postCount: 5,
-    color: "text-success"
-  },
-  {
-    name: "Performance Marketing",
-    slug: "performance-marketing", 
-    description: "Data-driven marketing, attribution, and conversion optimization",
-    postCount: 5,
-    color: "text-warning"
-  },
-  {
-    name: "Case Studies",
-    slug: "case-studies",
-    description: "Real client results and campaign optimization case studies", 
-    postCount: 5,
-    color: "text-accent"
-  },
-  {
-    name: "Tools & Resources",
-    slug: "tools",
-    description: "PPC tools, analytics setup, and automation resources",
-    postCount: 5,
-    color: "text-muted-foreground"
-  }
-];
-
-const recentPosts = [
-  {
-    slug: "google-ads-quality-score-improvement",
-    title: "How to Improve Google Ads Quality Score in 2025",
-    category: "Google Ads",
-    date: "Dec 15, 2024",
-    readTime: "6 min read",
-    href: "#" // Coming soon
-  },
-  {
-    slug: "ppc-attribution-modeling-guide", 
-    title: "PPC Attribution Modeling: Complete Guide",
-    category: "PPC Strategy",
-    date: "Dec 14, 2024", 
-    readTime: "9 min read",
-    href: "#" // Coming soon
-  },
-  {
-    slug: "ecommerce-google-ads-case-study",
-    title: "E-commerce Google Ads Case Study: 300% ROAS Increase",
-    category: "Case Studies",
-    date: "Dec 13, 2024",
-    readTime: "7 min read",
-    href: "#" // Coming soon
-  },
-  {
-    slug: "performance-marketing-kpis-metrics",
-    title: "Essential Performance Marketing KPIs and Metrics",
-    category: "Performance Marketing", 
-    date: "Dec 12, 2024",
-    readTime: "8 min read",
-    href: "#" // Coming soon
-  }
-];
-
-export default function BlogPage() {
   return (
     <>
       {/* Hero Section */}
@@ -157,7 +53,7 @@ export default function BlogPage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category) => (
+            {blogCategories.map((category) => (
               <Card key={category.slug} className="h-full hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -171,9 +67,15 @@ export default function BlogPage() {
                   <p className="text-muted-foreground mb-4">
                     {category.description}
                   </p>
-                  <Button variant="ghost" size="sm" className="w-full">
-                    View Posts →
-                  </Button>
+                  {category.postCount > 0 ? (
+                    <Button variant="ghost" size="sm" className="w-full" href="#all-posts">
+                      View Posts →
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" size="sm" className="w-full" disabled>
+                      Coming Soon
+                    </Button>
+                  )}
                 </div>
               </Card>
             ))}
@@ -193,7 +95,16 @@ export default function BlogPage() {
           
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredPosts.map((post) => (
-              <Card key={post.slug} className="h-full hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+              <Card key={post.slug} className="h-full hover:shadow-lg transition-all duration-200 hover:-translate-y-1 overflow-hidden">
+                {post.image && (
+                  <div className="aspect-video w-full overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={`${post.title} - Featured image`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-sm bg-primary px-2 py-1 rounded-full text-primary-foreground">
@@ -202,7 +113,9 @@ export default function BlogPage() {
                     <span className="text-sm text-muted-foreground">{post.readTime}</span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">
-                    {post.title}
+                    <Link href={post.href} className="hover:text-primary transition-colors">
+                      {post.title}
+                    </Link>
                   </h3>
                   <p className="text-muted-foreground mb-4 line-clamp-3">
                     {post.excerpt}
@@ -220,24 +133,30 @@ export default function BlogPage() {
         </Container>
       </section>
 
-      {/* Recent Posts */}
-      <section className="py-16">
+      {/* All Posts Section */}
+      <section id="all-posts" className="py-16">
         <Container>
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Recent Posts</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">All Posts</h2>
               <p className="text-lg text-muted-foreground">
-                Latest insights and strategies from the performance marketing world.
+                Complete collection of Google Ads and PPC optimization guides.
               </p>
             </div>
-            <Button href="/blog/all" variant="outline">
-              View All Posts
-            </Button>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {recentPosts.map((post) => (
-              <Card key={post.slug} className="hover:shadow-md transition-all duration-200 cursor-pointer">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allBlogPosts.map((post) => (
+              <Card key={post.slug} className="h-full hover:shadow-lg transition-all duration-200 hover:-translate-y-1 overflow-hidden">
+                {post.image && (
+                  <div className="aspect-video w-full overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={`${post.title} - Featured image`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-sm bg-accent px-2 py-1 rounded-full">
@@ -245,18 +164,19 @@ export default function BlogPage() {
                     </span>
                     <span className="text-sm text-muted-foreground">{post.readTime}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">
-                    {post.title}
+                  <h3 className="text-lg font-semibold mb-3 line-clamp-2">
+                    <Link href={post.href} className="hover:text-primary transition-colors">
+                      {post.title}
+                    </Link>
                   </h3>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
                   <div className="flex items-center justify-between">
-                    <p className="text-sm text-muted-foreground">{post.date}</p>
-                    {post.href !== "#" ? (
-                      <Button variant="ghost" size="sm" href={post.href}>
-                        Read More →
-                      </Button>
-                    ) : (
-                      <span className="text-xs text-muted-foreground">Coming Soon</span>
-                    )}
+                    <span className="text-sm text-muted-foreground">{post.date}</span>
+                    <Button variant="ghost" size="sm" href={post.href}>
+                      Read More →
+                    </Button>
                   </div>
                 </div>
               </Card>
