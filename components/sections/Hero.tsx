@@ -14,14 +14,13 @@ interface HeroProps {
 export default function Hero({ headline, subheadline, cta, ctaHref }: HeroProps) {
   return (
     <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-primary/5" />
+      {/* Simplified background gradient - reduced complexity */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background to-secondary/20" />
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-primary/5 to-transparent rounded-full blur-3xl" />
+      {/* Simplified animated background elements - reduced blur and size */}
+      <div className="absolute inset-0 overflow-hidden opacity-60">
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-xl" />
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-xl" />
       </div>
 
       <Container className="relative z-10">
@@ -30,7 +29,7 @@ export default function Hero({ headline, subheadline, cta, ctaHref }: HeroProps)
             <span className="block text-foreground mb-2">
               {headline.split(' ').slice(0, -3).join(' ')}
             </span>
-            <span className="bg-gradient-to-r from-primary via-primary-hover to-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
               {headline.split(' ').slice(-3).join(' ')}
             </span>
           </h1>
@@ -69,7 +68,7 @@ export default function Hero({ headline, subheadline, cta, ctaHref }: HeroProps)
               <div className="text-sm text-muted-foreground">Revenue Generated</div>
             </div>
             <div className="text-center">
-                              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">8+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">8+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
@@ -80,10 +79,10 @@ export default function Hero({ headline, subheadline, cta, ctaHref }: HeroProps)
         </div>
       </Container>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse"></div>
+      {/* Simplified scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-muted-foreground/70 rounded-full mt-2"></div>
         </div>
       </div>
     </section>

@@ -37,19 +37,20 @@ export default function LeadMagnet({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
-  // Load reCAPTCHA script
-  useEffect(() => {
+  // Load reCAPTCHA script only when user starts interacting with form
+  const loadRecaptcha = () => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (!siteKey) return;
-    if (document.getElementById('recaptcha-script')) return;
+    if (!siteKey || recaptchaLoaded || document.getElementById('recaptcha-script')) return;
 
     const script = document.createElement('script');
     script.id = 'recaptcha-script';
     script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
     script.async = true;
+    script.onload = () => setRecaptchaLoaded(true);
     document.head.appendChild(script);
-  }, []);
+  };
 
   const executeRecaptcha = async (): Promise<string | null> => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -70,6 +71,18 @@ export default function LeadMagnet({
       [e.target.name]: e.target.value
     }));
     setError(''); // Clear any previous errors
+    
+    // Load reCAPTCHA when user starts typing
+    if (!recaptchaLoaded) {
+      loadRecaptcha();
+    }
+  };
+
+  const handleFocus = () => {
+    // Load reCAPTCHA when user focuses on any form field
+    if (!recaptchaLoaded) {
+      loadRecaptcha();
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -143,170 +156,151 @@ This user requested a free PPC account audit through the lead magnet on the home
         monthlySpend: '',
         primaryGoal: ''
       });
-
-    } catch (error) {
-      console.error('Lead magnet submission error:', error);
-      setError(error instanceof Error ? error.message : 'Network error. Please try again.');
+      
+    } catch (err) {
+      console.error('Lead magnet submission error:', err);
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
     } finally {
-    setIsSubmitting(false);
+      setIsSubmitting(false);
     }
   };
 
   if (isSubmitted) {
     return (
-      <Card variant="feature" highlight="success" className={`text-center ${className}`}>
-        <div className="p-8">
-          <div className="text-6xl mb-4">🎉</div>
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Thank You! Your Audit Request is Confirmed
-          </h3>
-          <p className="text-muted-foreground mb-6">
-            I've received your request and will personally review your accounts. You'll receive your detailed audit within 48 hours.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/results/" variant="outline">
-              View Case Studies
-            </Button>
-            <Button href="/about/" variant="ghost">
-              Learn More About Me
-            </Button>
-          </div>
+      <Card className={`p-8 text-center ${className}`}>
+        <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
         </div>
+        <h3 className="text-2xl font-bold text-foreground mb-4">Request Submitted!</h3>
+        <p className="text-muted-foreground mb-6">
+          Thanks for your interest! I'll analyze your account and send you a detailed audit report within 48 hours.
+        </p>
+        <Button onClick={() => setIsSubmitted(false)} variant="outline">
+          Submit Another Request
+        </Button>
       </Card>
     );
   }
 
   return (
-    <Card variant="feature" highlight="primary" className={className}>
-      <div className="p-8">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            {title}
-          </h3>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            {subtitle}
-          </p>
-          <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-            Worth $500 - Free for a limited time
-          </div>
+    <Card className={`p-8 ${className}`}>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-foreground mb-4">{title}</h2>
+        <p className="text-muted-foreground text-lg">{subtitle}</p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-xl font-semibold text-foreground mb-4">What You'll Get:</h3>
+          <ul className="space-y-3">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-center">
+                <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0" />
+                <span className="text-muted-foreground">{benefit}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+              {error}
+            </div>
+          )}
+          
           <div>
-            <h4 className="font-semibold text-foreground mb-4">What You'll Get:</h4>
-            <ul className="space-y-3">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <svg className="w-5 h-5 text-success mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-muted-foreground">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <div className="mt-6 p-4 bg-accent rounded-lg">
-              <p className="text-sm text-muted-foreground">
-                <strong>No spam, ever.</strong> I respect your privacy and will only send valuable PPC insights.
-              </p>
-            </div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name *"
+              required
+              value={formData.name}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+            />
           </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {error && (
-              <div className="bg-destructive/10 border border-destructive/20 text-destructive px-4 py-3 rounded-lg text-sm">
-                {error}
-              </div>
-            )}
-            
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Full Name*"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
-              />
-            </div>
-
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Business Email*"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
-              />
-            </div>
-
-            <div>
-              <input
-                type="text"
-                name="company"
-                placeholder="Company Name*"
-                value={formData.company}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
-              />
-            </div>
-
-            <div>
-              <select
-                name="monthlySpend"
-                value={formData.monthlySpend}
-                onChange={handleInputChange}
-                required
-                aria-label="Monthly ad spend"
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
-              >
-                <option value="">Monthly Ad Spend*</option>
-                <option value="under-5k">Under $5K</option>
-                <option value="5k-15k">$5K - $15K</option>
-                <option value="15k-50k">$15K - $50K</option>
-                <option value="50k-100k">$50K - $100K</option>
-                <option value="over-100k">Over $100K</option>
-              </select>
-            </div>
-
-            <div>
-              <select
-                name="primaryGoal"
-                value={formData.primaryGoal}
-                onChange={handleInputChange}
-                required
-                aria-label="Primary goal"
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
-              >
-                <option value="">Primary Goal*</option>
-                <option value="improve-roas">Improve ROAS</option>
-                <option value="reduce-cpa">Reduce CPA</option>
-                <option value="scale-revenue">Scale Revenue</option>
-                <option value="fix-performance">Fix Poor Performance</option>
-                <option value="launch-campaigns">Launch New Campaigns</option>
-              </select>
-            </div>
-
-            <Button
-              type="submit"
-              variant="gradient"
-              size="lg"
-              loading={isSubmitting}
-              disabled={isSubmitting}
-              className="w-full"
+          
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address *"
+              required
+              value={formData.email}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+            />
+          </div>
+          
+          <div>
+            <input
+              type="text"
+              name="company"
+              placeholder="Company Name"
+              value={formData.company}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+            />
+          </div>
+          
+          <div>
+            <select
+              name="monthlySpend"
+              value={formData.monthlySpend}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+              required
+              aria-label="Monthly ad spend"
             >
-              {isSubmitting ? 'Submitting...' : 'Claim Your Free Audit'}
-            </Button>
-
-            <p className="text-xs text-muted-foreground text-center">
-              By submitting, you agree to receive your audit and PPC insights via email. Unsubscribe anytime.
-            </p>
-          </form>
-        </div>
+              <option value="">Monthly Ad Spend *</option>
+              <option value="<5k">Less than $5K</option>
+              <option value="5k-15k">$5K - $15K</option>
+              <option value="15k-30k">$15K - $30K</option>
+              <option value="30k-50k">$30K - $50K</option>
+              <option value="50k+">$50K+</option>
+            </select>
+          </div>
+          
+          <div>
+            <select
+              name="primaryGoal"
+              value={formData.primaryGoal}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+              required
+              aria-label="Primary goal"
+            >
+              <option value="">Primary Goal *</option>
+              <option value="increase-revenue">Increase Revenue</option>
+              <option value="reduce-cpa">Reduce Cost per Acquisition</option>
+              <option value="improve-roas">Improve ROAS</option>
+              <option value="scale-campaigns">Scale Campaigns</option>
+              <option value="audit-performance">Audit Current Performance</option>
+            </select>
+          </div>
+          
+          <Button 
+            type="submit" 
+            className="w-full" 
+            size="lg"
+            disabled={isSubmitting}
+            loading={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting...' : 'Get My FREE Audit'}
+          </Button>
+          
+          <p className="text-xs text-muted-foreground text-center">
+            No spam. Unsubscribe at any time. Results delivered within 48 hours.
+          </p>
+        </form>
       </div>
     </Card>
   );

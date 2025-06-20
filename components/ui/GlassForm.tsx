@@ -38,19 +38,20 @@ export const GlassForm: React.FC<GlassFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<ValidationError[]>([]);
+  const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
-  // Load reCAPTCHA script once when component mounts (if site key provided)
-  useEffect(() => {
+  // Load reCAPTCHA script only when user starts interacting with form
+  const loadRecaptcha = () => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (!siteKey) return;
-    if (document.getElementById('recaptcha-script')) return; // prevent duplicate
+    if (!siteKey || recaptchaLoaded || document.getElementById('recaptcha-script')) return;
 
     const script = document.createElement('script');
     script.id = 'recaptcha-script';
     script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
     script.async = true;
+    script.onload = () => setRecaptchaLoaded(true);
     document.head.appendChild(script);
-  }, []);
+  };
 
   const executeRecaptcha = async (): Promise<string | null> => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -65,9 +66,21 @@ export const GlassForm: React.FC<GlassFormProps> = ({
       [name]: value
     }));
     
+    // Load reCAPTCHA when user starts typing
+    if (!recaptchaLoaded) {
+      loadRecaptcha();
+    }
+    
     // Clear field-specific errors when user starts typing
     if (errors.some(error => error.field === name)) {
       setErrors(prev => prev.filter(error => error.field !== name));
+    }
+  };
+
+  const handleFocus = () => {
+    // Load reCAPTCHA when user focuses on any form field
+    if (!recaptchaLoaded) {
+      loadRecaptcha();
     }
   };
 
@@ -87,7 +100,7 @@ export const GlassForm: React.FC<GlassFormProps> = ({
     setIsSubmitting(true);
 
     try {
-      // 1) Obtain reCAPTCHA token (if configured)
+      // 1) Obtain reCAPTCHA token (if configured and loaded)
       const recaptchaToken = await executeRecaptcha();
 
       // Submit form to API endpoint
@@ -243,6 +256,7 @@ export const GlassForm: React.FC<GlassFormProps> = ({
                   required
                   value={formData.name}
                   onChange={handleChange}
+                  onFocus={handleFocus}
                   className={inputClasses('name')}
                   placeholder="Your full name"
                 />
@@ -267,6 +281,7 @@ export const GlassForm: React.FC<GlassFormProps> = ({
                   required
                   value={formData.email}
                   onChange={handleChange}
+                  onFocus={handleFocus}
                   className={inputClasses('email')}
                   placeholder="your@email.com"
                 />
@@ -293,6 +308,7 @@ export const GlassForm: React.FC<GlassFormProps> = ({
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
+                  onFocus={handleFocus}
                   className={inputClasses('company')}
                   placeholder="Your company name"
                 />
@@ -308,6 +324,7 @@ export const GlassForm: React.FC<GlassFormProps> = ({
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
+                    onFocus={handleFocus}
                     className={selectClasses}
                   >
                     <option value="">Select budget range</option>
@@ -339,6 +356,7 @@ export const GlassForm: React.FC<GlassFormProps> = ({
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
+                onFocus={handleFocus}
                 className={inputClasses('message')}
                 placeholder="Tell me about your business, current marketing challenges, and goals..."
               />
